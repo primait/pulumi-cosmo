@@ -1,0 +1,1490 @@
+{
+    "name": "cosmo",
+    "displayName": "Cosmo",
+    "description": "A Pulumi package for creating and managing WunderGraph Cosmo resources.",
+    "keywords": [
+        "cosmo",
+        "wundergraph",
+        "category/cloud"
+    ],
+    "homepage": "https://cosmo-docs.wundergraph.com/",
+    "license": "Apache-2.0",
+    "attribution": "This Pulumi package is based on the [`cosmo` Terraform Provider](https://github.com/wundergraph/terraform-provider-cosmo).",
+    "repository": "https://github.com/wundergraph/pulumi-cosmo",
+    "pluginDownloadURL": "https://github.com/wundergraph/pulumi-cosmo/releases/download/v${VERSION}/",
+    "publisher": "WunderGraph",
+    "meta": {
+        "moduleFormat": "(.*)(?:/[^/]*)"
+    },
+    "language": {
+        "csharp": {
+            "packageReferences": {
+                "Pulumi": "3.*"
+            },
+            "compatibility": "tfbridge20",
+            "respectSchemaVersion": true
+        },
+        "go": {
+            "importBasePath": "github.com/wundergraph/pulumi-cosmo/sdk/go/cosmo",
+            "generateResourceContainerTypes": true,
+            "generateExtraInputTypes": true,
+            "respectSchemaVersion": true
+        },
+        "nodejs": {
+            "packageDescription": "A Pulumi package for creating and managing WunderGraph Cosmo resources.",
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/wundergraph/terraform-provider-cosmo)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-cosmo` repo](https://github.com/wundergraph/pulumi-cosmo/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-cosmo` repo](https://github.com/wundergraph/terraform-provider-cosmo/issues).",
+            "compatibility": "tfbridge20",
+            "disableUnionOutputTypes": true,
+            "respectSchemaVersion": true
+        },
+        "python": {
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/wundergraph/terraform-provider-cosmo)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-cosmo` repo](https://github.com/wundergraph/pulumi-cosmo/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-cosmo` repo](https://github.com/wundergraph/terraform-provider-cosmo/issues).",
+            "compatibility": "tfbridge20",
+            "respectSchemaVersion": true,
+            "pyproject": {
+                "enabled": true
+            }
+        }
+    },
+    "config": {
+        "variables": {
+            "apiKey": {
+                "type": "string",
+                "description": "The Api Key to be used: Leave blank to use the COSMO_API_KEY environment variable"
+            },
+            "apiUrl": {
+                "type": "string",
+                "description": "The Api Url to be used: Leave blank to use: https://cosmo-cp.wundergraph.com or use the COSMO_API_URL environment variable"
+            }
+        }
+    },
+    "provider": {
+        "description": "The provider type for the cosmo package. By default, resources use package-wide configuration\nsettings, however an explicit `Provider` instance may be created and passed during resource\nconstruction to achieve fine-grained programmatic control over provider settings. See the\n[documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.\n",
+        "properties": {
+            "apiKey": {
+                "type": "string",
+                "description": "The Api Key to be used: Leave blank to use the COSMO_API_KEY environment variable"
+            },
+            "apiUrl": {
+                "type": "string",
+                "description": "The Api Url to be used: Leave blank to use: https://cosmo-cp.wundergraph.com or use the COSMO_API_URL environment variable"
+            }
+        },
+        "inputProperties": {
+            "apiKey": {
+                "type": "string",
+                "description": "The Api Key to be used: Leave blank to use the COSMO_API_KEY environment variable"
+            },
+            "apiUrl": {
+                "type": "string",
+                "description": "The Api Url to be used: Leave blank to use: https://cosmo-cp.wundergraph.com or use the COSMO_API_URL environment variable"
+            }
+        },
+        "methods": {
+            "terraformConfig": "pulumi:providers:cosmo/terraformConfig"
+        }
+    },
+    "resources": {
+        "cosmo:index/contract:Contract": {
+            "properties": {
+                "admissionWebhookSecret": {
+                    "type": "string"
+                },
+                "admissionWebhookUrl": {
+                    "type": "string"
+                },
+                "excludeTags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "includeTags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "name": {
+                    "type": "string"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "readme": {
+                    "type": "string"
+                },
+                "routingUrl": {
+                    "type": "string"
+                },
+                "source": {
+                    "type": "string"
+                },
+                "supportsFederation": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "name",
+                "namespace",
+                "routingUrl",
+                "source",
+                "supportsFederation"
+            ],
+            "inputProperties": {
+                "admissionWebhookSecret": {
+                    "type": "string"
+                },
+                "admissionWebhookUrl": {
+                    "type": "string"
+                },
+                "excludeTags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "includeTags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "name": {
+                    "type": "string"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "readme": {
+                    "type": "string"
+                },
+                "routingUrl": {
+                    "type": "string"
+                },
+                "source": {
+                    "type": "string"
+                },
+                "supportsFederation": {
+                    "type": "boolean"
+                }
+            },
+            "requiredInputs": [
+                "namespace",
+                "routingUrl",
+                "source"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering Contract resources.\n",
+                "properties": {
+                    "admissionWebhookSecret": {
+                        "type": "string"
+                    },
+                    "admissionWebhookUrl": {
+                        "type": "string"
+                    },
+                    "excludeTags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "includeTags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "readme": {
+                        "type": "string"
+                    },
+                    "routingUrl": {
+                        "type": "string"
+                    },
+                    "source": {
+                        "type": "string"
+                    },
+                    "supportsFederation": {
+                        "type": "boolean"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "cosmo:index/featureFlag:FeatureFlag": {
+            "properties": {
+                "createdAt": {
+                    "type": "string",
+                    "description": "The timestamp when the feature flag was created."
+                },
+                "createdBy": {
+                    "type": "string",
+                    "description": "The user who created the feature flag."
+                },
+                "featureSubgraphs": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "The list of feature subgraphs associated with the feature flag. \nAt least one feature subgraph must be provided."
+                },
+                "isEnabled": {
+                    "type": "boolean",
+                    "description": "Indicates whether the feature flag is enabled."
+                },
+                "labels": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    },
+                    "description": "The labels associated with the feature flag. These labels indicate which \nfederated graphs can be associated with the feature flag to enabled calls against the corresponding feature subgraph."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the feature flag."
+                },
+                "namespace": {
+                    "type": "string",
+                    "description": "The namespace of the feature flag."
+                },
+                "updatedAt": {
+                    "type": "string",
+                    "description": "The timestamp when the feature flag was last updated."
+                }
+            },
+            "required": [
+                "createdAt",
+                "createdBy",
+                "featureSubgraphs",
+                "name",
+                "namespace",
+                "updatedAt"
+            ],
+            "inputProperties": {
+                "featureSubgraphs": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "The list of feature subgraphs associated with the feature flag. \nAt least one feature subgraph must be provided."
+                },
+                "isEnabled": {
+                    "type": "boolean",
+                    "description": "Indicates whether the feature flag is enabled."
+                },
+                "labels": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    },
+                    "description": "The labels associated with the feature flag. These labels indicate which \nfederated graphs can be associated with the feature flag to enabled calls against the corresponding feature subgraph."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the feature flag."
+                },
+                "namespace": {
+                    "type": "string",
+                    "description": "The namespace of the feature flag."
+                }
+            },
+            "requiredInputs": [
+                "featureSubgraphs"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering FeatureFlag resources.\n",
+                "properties": {
+                    "createdAt": {
+                        "type": "string",
+                        "description": "The timestamp when the feature flag was created."
+                    },
+                    "createdBy": {
+                        "type": "string",
+                        "description": "The user who created the feature flag."
+                    },
+                    "featureSubgraphs": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "The list of feature subgraphs associated with the feature flag. \nAt least one feature subgraph must be provided."
+                    },
+                    "isEnabled": {
+                        "type": "boolean",
+                        "description": "Indicates whether the feature flag is enabled."
+                    },
+                    "labels": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        },
+                        "description": "The labels associated with the feature flag. These labels indicate which \nfederated graphs can be associated with the feature flag to enabled calls against the corresponding feature subgraph."
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the feature flag."
+                    },
+                    "namespace": {
+                        "type": "string",
+                        "description": "The namespace of the feature flag."
+                    },
+                    "updatedAt": {
+                        "type": "string",
+                        "description": "The timestamp when the feature flag was last updated."
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "cosmo:index/featureSubgraph:FeatureSubgraph": {
+            "properties": {
+                "baseSubgraphName": {
+                    "type": "string",
+                    "description": "The name of the base subgraph that this feature subgraph extends."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the feature subgraph."
+                },
+                "namespace": {
+                    "type": "string",
+                    "description": "The namespace to create the feature subgraph in."
+                },
+                "readme": {
+                    "type": "string",
+                    "description": "The readme for the subgraph."
+                },
+                "routingUrl": {
+                    "type": "string",
+                    "description": "The routing URL of the feature subgraph."
+                },
+                "schema": {
+                    "type": "string",
+                    "description": "The schema for the subgraph."
+                },
+                "subscriptionProtocol": {
+                    "type": "string",
+                    "description": "The subscription protocol for the subgraph."
+                },
+                "subscriptionUrl": {
+                    "type": "string",
+                    "description": "The subscription URL for the subgraph."
+                },
+                "websocketSubprotocol": {
+                    "type": "string",
+                    "description": "The websocket subprotocol for the subgraph."
+                }
+            },
+            "required": [
+                "baseSubgraphName",
+                "name",
+                "namespace",
+                "routingUrl",
+                "subscriptionProtocol",
+                "websocketSubprotocol"
+            ],
+            "inputProperties": {
+                "baseSubgraphName": {
+                    "type": "string",
+                    "description": "The name of the base subgraph that this feature subgraph extends."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the feature subgraph."
+                },
+                "namespace": {
+                    "type": "string",
+                    "description": "The namespace to create the feature subgraph in."
+                },
+                "readme": {
+                    "type": "string",
+                    "description": "The readme for the subgraph."
+                },
+                "routingUrl": {
+                    "type": "string",
+                    "description": "The routing URL of the feature subgraph."
+                },
+                "schema": {
+                    "type": "string",
+                    "description": "The schema for the subgraph."
+                },
+                "subscriptionProtocol": {
+                    "type": "string",
+                    "description": "The subscription protocol for the subgraph."
+                },
+                "subscriptionUrl": {
+                    "type": "string",
+                    "description": "The subscription URL for the subgraph."
+                },
+                "websocketSubprotocol": {
+                    "type": "string",
+                    "description": "The websocket subprotocol for the subgraph."
+                }
+            },
+            "requiredInputs": [
+                "baseSubgraphName",
+                "routingUrl"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering FeatureSubgraph resources.\n",
+                "properties": {
+                    "baseSubgraphName": {
+                        "type": "string",
+                        "description": "The name of the base subgraph that this feature subgraph extends."
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the feature subgraph."
+                    },
+                    "namespace": {
+                        "type": "string",
+                        "description": "The namespace to create the feature subgraph in."
+                    },
+                    "readme": {
+                        "type": "string",
+                        "description": "The readme for the subgraph."
+                    },
+                    "routingUrl": {
+                        "type": "string",
+                        "description": "The routing URL of the feature subgraph."
+                    },
+                    "schema": {
+                        "type": "string",
+                        "description": "The schema for the subgraph."
+                    },
+                    "subscriptionProtocol": {
+                        "type": "string",
+                        "description": "The subscription protocol for the subgraph."
+                    },
+                    "subscriptionUrl": {
+                        "type": "string",
+                        "description": "The subscription URL for the subgraph."
+                    },
+                    "websocketSubprotocol": {
+                        "type": "string",
+                        "description": "The websocket subprotocol for the subgraph."
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "cosmo:index/federatedGraph:FederatedGraph": {
+            "properties": {
+                "admissionWebhookSecret": {
+                    "type": "string",
+                    "description": "The secret token used to authenticate the admission webhook requests.",
+                    "secret": true
+                },
+                "admissionWebhookUrl": {
+                    "type": "string",
+                    "description": "The URL for the admission webhook that will be triggered during graph operations."
+                },
+                "labelMatchers": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "A list of label matchers used to select the services that will form the federated graph."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the federated graph. This is used to identify the graph and must be unique within the namespace."
+                },
+                "namespace": {
+                    "type": "string",
+                    "description": "The namespace in which the federated graph is located. Defaults to 'default' if not provided."
+                },
+                "readme": {
+                    "type": "string",
+                    "description": "Readme content for the federated graph."
+                },
+                "routingUrl": {
+                    "type": "string",
+                    "description": "The URL of the service that routes requests to the federated graph."
+                }
+            },
+            "required": [
+                "labelMatchers",
+                "name",
+                "namespace",
+                "routingUrl"
+            ],
+            "inputProperties": {
+                "admissionWebhookSecret": {
+                    "type": "string",
+                    "description": "The secret token used to authenticate the admission webhook requests.",
+                    "secret": true
+                },
+                "admissionWebhookUrl": {
+                    "type": "string",
+                    "description": "The URL for the admission webhook that will be triggered during graph operations."
+                },
+                "labelMatchers": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "A list of label matchers used to select the services that will form the federated graph."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the federated graph. This is used to identify the graph and must be unique within the namespace."
+                },
+                "namespace": {
+                    "type": "string",
+                    "description": "The namespace in which the federated graph is located. Defaults to 'default' if not provided."
+                },
+                "readme": {
+                    "type": "string",
+                    "description": "Readme content for the federated graph."
+                },
+                "routingUrl": {
+                    "type": "string",
+                    "description": "The URL of the service that routes requests to the federated graph."
+                }
+            },
+            "requiredInputs": [
+                "routingUrl"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering FederatedGraph resources.\n",
+                "properties": {
+                    "admissionWebhookSecret": {
+                        "type": "string",
+                        "description": "The secret token used to authenticate the admission webhook requests.",
+                        "secret": true
+                    },
+                    "admissionWebhookUrl": {
+                        "type": "string",
+                        "description": "The URL for the admission webhook that will be triggered during graph operations."
+                    },
+                    "labelMatchers": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "A list of label matchers used to select the services that will form the federated graph."
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the federated graph. This is used to identify the graph and must be unique within the namespace."
+                    },
+                    "namespace": {
+                        "type": "string",
+                        "description": "The namespace in which the federated graph is located. Defaults to 'default' if not provided."
+                    },
+                    "readme": {
+                        "type": "string",
+                        "description": "Readme content for the federated graph."
+                    },
+                    "routingUrl": {
+                        "type": "string",
+                        "description": "The URL of the service that routes requests to the federated graph."
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "cosmo:index/monograph:Monograph": {
+            "properties": {
+                "admissionWebhookSecret": {
+                    "type": "string",
+                    "description": "The admission webhook secret for the monograph."
+                },
+                "admissionWebhookUrl": {
+                    "type": "string",
+                    "description": "The admission webhook URL for the monograph."
+                },
+                "graphUrl": {
+                    "type": "string",
+                    "description": "The GraphQL endpoint URL of the monograph."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the monograph."
+                },
+                "namespace": {
+                    "type": "string",
+                    "description": "The namespace in which the monograph is located."
+                },
+                "readme": {
+                    "type": "string",
+                    "description": "The readme for the subgraph."
+                },
+                "routingUrl": {
+                    "type": "string",
+                    "description": "The routing URL for the monograph."
+                },
+                "schema": {
+                    "type": "string",
+                    "description": "The schema for the subgraph."
+                },
+                "subscriptionProtocol": {
+                    "type": "string",
+                    "description": "The subscription protocol for the subgraph."
+                },
+                "subscriptionUrl": {
+                    "type": "string",
+                    "description": "The subscription URL for the subgraph."
+                },
+                "websocketSubprotocol": {
+                    "type": "string",
+                    "description": "The websocket subprotocol for the subgraph."
+                }
+            },
+            "required": [
+                "graphUrl",
+                "name",
+                "namespace",
+                "routingUrl"
+            ],
+            "inputProperties": {
+                "admissionWebhookSecret": {
+                    "type": "string",
+                    "description": "The admission webhook secret for the monograph."
+                },
+                "admissionWebhookUrl": {
+                    "type": "string",
+                    "description": "The admission webhook URL for the monograph."
+                },
+                "graphUrl": {
+                    "type": "string",
+                    "description": "The GraphQL endpoint URL of the monograph."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the monograph."
+                },
+                "namespace": {
+                    "type": "string",
+                    "description": "The namespace in which the monograph is located."
+                },
+                "readme": {
+                    "type": "string",
+                    "description": "The readme for the subgraph."
+                },
+                "routingUrl": {
+                    "type": "string",
+                    "description": "The routing URL for the monograph."
+                },
+                "schema": {
+                    "type": "string",
+                    "description": "The schema for the subgraph."
+                },
+                "subscriptionProtocol": {
+                    "type": "string",
+                    "description": "The subscription protocol for the subgraph."
+                },
+                "subscriptionUrl": {
+                    "type": "string",
+                    "description": "The subscription URL for the subgraph."
+                },
+                "websocketSubprotocol": {
+                    "type": "string",
+                    "description": "The websocket subprotocol for the subgraph."
+                }
+            },
+            "requiredInputs": [
+                "graphUrl",
+                "routingUrl"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering Monograph resources.\n",
+                "properties": {
+                    "admissionWebhookSecret": {
+                        "type": "string",
+                        "description": "The admission webhook secret for the monograph."
+                    },
+                    "admissionWebhookUrl": {
+                        "type": "string",
+                        "description": "The admission webhook URL for the monograph."
+                    },
+                    "graphUrl": {
+                        "type": "string",
+                        "description": "The GraphQL endpoint URL of the monograph."
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the monograph."
+                    },
+                    "namespace": {
+                        "type": "string",
+                        "description": "The namespace in which the monograph is located."
+                    },
+                    "readme": {
+                        "type": "string",
+                        "description": "The readme for the subgraph."
+                    },
+                    "routingUrl": {
+                        "type": "string",
+                        "description": "The routing URL for the monograph."
+                    },
+                    "schema": {
+                        "type": "string",
+                        "description": "The schema for the subgraph."
+                    },
+                    "subscriptionProtocol": {
+                        "type": "string",
+                        "description": "The subscription protocol for the subgraph."
+                    },
+                    "subscriptionUrl": {
+                        "type": "string",
+                        "description": "The subscription URL for the subgraph."
+                    },
+                    "websocketSubprotocol": {
+                        "type": "string",
+                        "description": "The websocket subprotocol for the subgraph."
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "cosmo:index/namespace:Namespace": {
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The name of the namespace."
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "inputProperties": {
+                "name": {
+                    "type": "string",
+                    "description": "The name of the namespace."
+                }
+            },
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering Namespace resources.\n",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the namespace."
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "cosmo:index/routerToken:RouterToken": {
+            "properties": {
+                "graphName": {
+                    "type": "string",
+                    "description": "The name of the graph to create the token for."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the router token."
+                },
+                "namespace": {
+                    "type": "string",
+                    "description": "The namespace to create the token in."
+                },
+                "token": {
+                    "type": "string",
+                    "description": "The token to be used for the router.",
+                    "secret": true
+                }
+            },
+            "required": [
+                "graphName",
+                "name",
+                "namespace",
+                "token"
+            ],
+            "inputProperties": {
+                "graphName": {
+                    "type": "string",
+                    "description": "The name of the graph to create the token for."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the router token."
+                },
+                "namespace": {
+                    "type": "string",
+                    "description": "The namespace to create the token in."
+                }
+            },
+            "requiredInputs": [
+                "graphName"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering RouterToken resources.\n",
+                "properties": {
+                    "graphName": {
+                        "type": "string",
+                        "description": "The name of the graph to create the token for."
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the router token."
+                    },
+                    "namespace": {
+                        "type": "string",
+                        "description": "The namespace to create the token in."
+                    },
+                    "token": {
+                        "type": "string",
+                        "description": "The token to be used for the router.",
+                        "secret": true
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "cosmo:index/subgraph:Subgraph": {
+            "properties": {
+                "isEventDrivenGraph": {
+                    "type": "boolean",
+                    "description": "Indicates if the subgraph is event-driven."
+                },
+                "labels": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    },
+                    "description": "Labels for the subgraph."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the subgraph."
+                },
+                "namespace": {
+                    "type": "string",
+                    "description": "The namespace in which the subgraph is located."
+                },
+                "readme": {
+                    "type": "string",
+                    "description": "The readme for the subgraph."
+                },
+                "routingUrl": {
+                    "type": "string",
+                    "description": "The routing URL of the subgraph. Routing URL is required for normal subgraphs but not for event driven subgraphs."
+                },
+                "schema": {
+                    "type": "string",
+                    "description": "The schema for the subgraph."
+                },
+                "subscriptionProtocol": {
+                    "type": "string",
+                    "description": "The subscription protocol for the subgraph."
+                },
+                "subscriptionUrl": {
+                    "type": "string",
+                    "description": "The subscription URL for the subgraph."
+                },
+                "unsetLabels": {
+                    "type": "boolean",
+                    "description": "Unset labels for the subgraph."
+                },
+                "websocketSubprotocol": {
+                    "type": "string",
+                    "description": "The websocket subprotocol for the subgraph."
+                }
+            },
+            "required": [
+                "isEventDrivenGraph",
+                "labels",
+                "name",
+                "namespace",
+                "routingUrl",
+                "subscriptionProtocol",
+                "websocketSubprotocol"
+            ],
+            "inputProperties": {
+                "isEventDrivenGraph": {
+                    "type": "boolean",
+                    "description": "Indicates if the subgraph is event-driven."
+                },
+                "labels": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    },
+                    "description": "Labels for the subgraph."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the subgraph."
+                },
+                "namespace": {
+                    "type": "string",
+                    "description": "The namespace in which the subgraph is located."
+                },
+                "readme": {
+                    "type": "string",
+                    "description": "The readme for the subgraph."
+                },
+                "routingUrl": {
+                    "type": "string",
+                    "description": "The routing URL of the subgraph. Routing URL is required for normal subgraphs but not for event driven subgraphs."
+                },
+                "schema": {
+                    "type": "string",
+                    "description": "The schema for the subgraph."
+                },
+                "subscriptionProtocol": {
+                    "type": "string",
+                    "description": "The subscription protocol for the subgraph."
+                },
+                "subscriptionUrl": {
+                    "type": "string",
+                    "description": "The subscription URL for the subgraph."
+                },
+                "unsetLabels": {
+                    "type": "boolean",
+                    "description": "Unset labels for the subgraph."
+                },
+                "websocketSubprotocol": {
+                    "type": "string",
+                    "description": "The websocket subprotocol for the subgraph."
+                }
+            },
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering Subgraph resources.\n",
+                "properties": {
+                    "isEventDrivenGraph": {
+                        "type": "boolean",
+                        "description": "Indicates if the subgraph is event-driven."
+                    },
+                    "labels": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        },
+                        "description": "Labels for the subgraph."
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the subgraph."
+                    },
+                    "namespace": {
+                        "type": "string",
+                        "description": "The namespace in which the subgraph is located."
+                    },
+                    "readme": {
+                        "type": "string",
+                        "description": "The readme for the subgraph."
+                    },
+                    "routingUrl": {
+                        "type": "string",
+                        "description": "The routing URL of the subgraph. Routing URL is required for normal subgraphs but not for event driven subgraphs."
+                    },
+                    "schema": {
+                        "type": "string",
+                        "description": "The schema for the subgraph."
+                    },
+                    "subscriptionProtocol": {
+                        "type": "string",
+                        "description": "The subscription protocol for the subgraph."
+                    },
+                    "subscriptionUrl": {
+                        "type": "string",
+                        "description": "The subscription URL for the subgraph."
+                    },
+                    "unsetLabels": {
+                        "type": "boolean",
+                        "description": "Unset labels for the subgraph."
+                    },
+                    "websocketSubprotocol": {
+                        "type": "string",
+                        "description": "The websocket subprotocol for the subgraph."
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "functions": {
+        "cosmo:index/getContract:getContract": {
+            "inputs": {
+                "description": "A collection of arguments for invoking getContract.\n",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name",
+                    "namespace"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getContract.\n",
+                "properties": {
+                    "admissionWebhookSecret": {
+                        "secret": true,
+                        "type": "string"
+                    },
+                    "admissionWebhookUrl": {
+                        "type": "string"
+                    },
+                    "excludeTags": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "id": {
+                        "type": "string"
+                    },
+                    "includeTags": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "labelMatchers": {
+                        "additionalProperties": {
+                            "type": "string"
+                        },
+                        "type": "object"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "readme": {
+                        "type": "string"
+                    },
+                    "routingUrl": {
+                        "type": "string"
+                    },
+                    "supportsFederation": {
+                        "type": "boolean"
+                    }
+                },
+                "required": [
+                    "admissionWebhookSecret",
+                    "admissionWebhookUrl",
+                    "excludeTags",
+                    "id",
+                    "includeTags",
+                    "labelMatchers",
+                    "name",
+                    "namespace",
+                    "readme",
+                    "routingUrl",
+                    "supportsFederation"
+                ],
+                "type": "object"
+            }
+        },
+        "cosmo:index/getFeatureFlag:getFeatureFlag": {
+            "inputs": {
+                "description": "A collection of arguments for invoking getFeatureFlag.\n",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getFeatureFlag.\n",
+                "properties": {
+                    "createdAt": {
+                        "type": "string"
+                    },
+                    "createdBy": {
+                        "type": "string"
+                    },
+                    "featureSubgraphs": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "id": {
+                        "type": "string"
+                    },
+                    "isEnabled": {
+                        "type": "boolean"
+                    },
+                    "labels": {
+                        "additionalProperties": {
+                            "type": "string"
+                        },
+                        "type": "object"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "updatedAt": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "createdAt",
+                    "createdBy",
+                    "featureSubgraphs",
+                    "id",
+                    "isEnabled",
+                    "labels",
+                    "name",
+                    "updatedAt"
+                ],
+                "type": "object"
+            }
+        },
+        "cosmo:index/getFeatureSubgraph:getFeatureSubgraph": {
+            "inputs": {
+                "description": "A collection of arguments for invoking getFeatureSubgraph.\n",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getFeatureSubgraph.\n",
+                "properties": {
+                    "baseSubgraphName": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "readme": {
+                        "type": "string"
+                    },
+                    "routingUrl": {
+                        "type": "string"
+                    },
+                    "schema": {
+                        "type": "string"
+                    },
+                    "subscriptionProtocol": {
+                        "type": "string"
+                    },
+                    "subscriptionUrl": {
+                        "type": "string"
+                    },
+                    "websocketSubprotocol": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "baseSubgraphName",
+                    "id",
+                    "name",
+                    "readme",
+                    "routingUrl",
+                    "schema",
+                    "subscriptionProtocol",
+                    "subscriptionUrl",
+                    "websocketSubprotocol"
+                ],
+                "type": "object"
+            }
+        },
+        "cosmo:index/getFederatedGraph:getFederatedGraph": {
+            "inputs": {
+                "description": "A collection of arguments for invoking getFederatedGraph.\n",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name",
+                    "namespace"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getFederatedGraph.\n",
+                "properties": {
+                    "admissionWebhookSecret": {
+                        "secret": true,
+                        "type": "string"
+                    },
+                    "admissionWebhookUrl": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    },
+                    "labelMatchers": {
+                        "additionalProperties": {
+                            "type": "string"
+                        },
+                        "type": "object"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "readme": {
+                        "type": "string"
+                    },
+                    "routingUrl": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "admissionWebhookSecret",
+                    "admissionWebhookUrl",
+                    "id",
+                    "labelMatchers",
+                    "name",
+                    "namespace",
+                    "readme",
+                    "routingUrl"
+                ],
+                "type": "object"
+            }
+        },
+        "cosmo:index/getMonograph:getMonograph": {
+            "inputs": {
+                "description": "A collection of arguments for invoking getMonograph.\n",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getMonograph.\n",
+                "properties": {
+                    "admissionWebhookSecret": {
+                        "secret": true,
+                        "type": "string"
+                    },
+                    "admissionWebhookUrl": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    },
+                    "labelMatchers": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "readme": {
+                        "type": "string"
+                    },
+                    "routingUrl": {
+                        "type": "string"
+                    },
+                    "subscriptionProtocol": {
+                        "type": "string"
+                    },
+                    "websocketSubprotocol": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "admissionWebhookSecret",
+                    "admissionWebhookUrl",
+                    "id",
+                    "labelMatchers",
+                    "name",
+                    "readme",
+                    "routingUrl",
+                    "subscriptionProtocol",
+                    "websocketSubprotocol"
+                ],
+                "type": "object"
+            }
+        },
+        "cosmo:index/getNamespace:getNamespace": {
+            "inputs": {
+                "description": "A collection of arguments for invoking getNamespace.\n",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getNamespace.\n",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "id",
+                    "name"
+                ],
+                "type": "object"
+            }
+        },
+        "cosmo:index/getSubgraph:getSubgraph": {
+            "inputs": {
+                "description": "A collection of arguments for invoking getSubgraph.\n",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name",
+                    "namespace"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getSubgraph.\n",
+                "properties": {
+                    "baseSubgraphName": {
+                        "type": "string"
+                    },
+                    "headers": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "id": {
+                        "type": "string"
+                    },
+                    "isEventDrivenGraph": {
+                        "type": "boolean"
+                    },
+                    "labels": {
+                        "additionalProperties": {
+                            "type": "string"
+                        },
+                        "type": "object"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "readme": {
+                        "type": "string"
+                    },
+                    "routingUrl": {
+                        "type": "string"
+                    },
+                    "schema": {
+                        "type": "string"
+                    },
+                    "subscriptionProtocol": {
+                        "type": "string"
+                    },
+                    "subscriptionUrl": {
+                        "type": "string"
+                    },
+                    "websocketSubprotocol": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "baseSubgraphName",
+                    "headers",
+                    "id",
+                    "isEventDrivenGraph",
+                    "labels",
+                    "name",
+                    "namespace",
+                    "readme",
+                    "routingUrl",
+                    "schema",
+                    "subscriptionProtocol",
+                    "subscriptionUrl",
+                    "websocketSubprotocol"
+                ],
+                "type": "object"
+            }
+        },
+        "pulumi:providers:cosmo/terraformConfig": {
+            "description": "This function returns a Terraform config object with terraform-namecased keys,to be used with the Terraform Module Provider.",
+            "inputs": {
+                "properties": {
+                    "__self__": {
+                        "type": "ref",
+                        "$ref": "#/provider"
+                    }
+                },
+                "type": "pulumi:providers:cosmo/terraformConfig",
+                "required": [
+                    "__self__"
+                ]
+            },
+            "outputs": {
+                "properties": {
+                    "result": {
+                        "additionalProperties": {
+                            "$ref": "pulumi.json#/Any"
+                        },
+                        "type": "object"
+                    }
+                },
+                "required": [
+                    "result"
+                ],
+                "type": "object"
+            }
+        }
+    }
+}

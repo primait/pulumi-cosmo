@@ -1,0 +1,6 @@
+{
+  "resource": true,
+  "name": "cosmo",
+  "version": "1.0.0-alpha.0+dev",
+  "server": "https://github.com/wundergraph/pulumi-cosmo/releases/download/v${VERSION}/"
+}

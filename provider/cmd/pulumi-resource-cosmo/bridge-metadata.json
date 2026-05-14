@@ -1,0 +1,110 @@
+{
+    "auto-aliasing": {
+        "resources": {
+            "cosmo_contract": {
+                "current": "cosmo:index/contract:Contract",
+                "majorVersion": 1,
+                "fields": {
+                    "exclude_tags": {
+                        "maxItemsOne": false
+                    },
+                    "include_tags": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "cosmo_feature_flag": {
+                "current": "cosmo:index/featureFlag:FeatureFlag",
+                "majorVersion": 1,
+                "fields": {
+                    "feature_subgraphs": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "cosmo_feature_subgraph": {
+                "current": "cosmo:index/featureSubgraph:FeatureSubgraph",
+                "majorVersion": 1
+            },
+            "cosmo_federated_graph": {
+                "current": "cosmo:index/federatedGraph:FederatedGraph",
+                "majorVersion": 1,
+                "fields": {
+                    "label_matchers": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "cosmo_monograph": {
+                "current": "cosmo:index/monograph:Monograph",
+                "majorVersion": 1
+            },
+            "cosmo_namespace": {
+                "current": "cosmo:index/namespace:Namespace",
+                "majorVersion": 1
+            },
+            "cosmo_router_token": {
+                "current": "cosmo:index/routerToken:RouterToken",
+                "majorVersion": 1
+            },
+            "cosmo_subgraph": {
+                "current": "cosmo:index/subgraph:Subgraph",
+                "majorVersion": 1
+            }
+        },
+        "datasources": {
+            "cosmo_contract": {
+                "current": "cosmo:index/getContract:getContract",
+                "majorVersion": 1,
+                "fields": {
+                    "exclude_tags": {
+                        "maxItemsOne": false
+                    },
+                    "include_tags": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "cosmo_feature_flag": {
+                "current": "cosmo:index/getFeatureFlag:getFeatureFlag",
+                "majorVersion": 1,
+                "fields": {
+                    "feature_subgraphs": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "cosmo_feature_subgraph": {
+                "current": "cosmo:index/getFeatureSubgraph:getFeatureSubgraph",
+                "majorVersion": 1
+            },
+            "cosmo_federated_graph": {
+                "current": "cosmo:index/getFederatedGraph:getFederatedGraph",
+                "majorVersion": 1
+            },
+            "cosmo_monograph": {
+                "current": "cosmo:index/getMonograph:getMonograph",
+                "majorVersion": 1,
+                "fields": {
+                    "label_matchers": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "cosmo_namespace": {
+                "current": "cosmo:index/getNamespace:getNamespace",
+                "majorVersion": 1
+            },
+            "cosmo_subgraph": {
+                "current": "cosmo:index/getSubgraph:getSubgraph",
+                "majorVersion": 1,
+                "fields": {
+                    "headers": {
+                        "maxItemsOne": false
+                    }
+                }
+            }
+        }
+    },
+    "auto-settings": {}
+}
