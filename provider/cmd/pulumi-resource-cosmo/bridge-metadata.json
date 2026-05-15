@@ -3,7 +3,6 @@
         "resources": {
             "cosmo_contract": {
                 "current": "cosmo:index/contract:Contract",
-                "majorVersion": 1,
                 "fields": {
                     "exclude_tags": {
                         "maxItemsOne": false
@@ -15,7 +14,6 @@
             },
             "cosmo_feature_flag": {
                 "current": "cosmo:index/featureFlag:FeatureFlag",
-                "majorVersion": 1,
                 "fields": {
                     "feature_subgraphs": {
                         "maxItemsOne": false
@@ -23,12 +21,10 @@
                 }
             },
             "cosmo_feature_subgraph": {
-                "current": "cosmo:index/featureSubgraph:FeatureSubgraph",
-                "majorVersion": 1
+                "current": "cosmo:index/featureSubgraph:FeatureSubgraph"
             },
             "cosmo_federated_graph": {
                 "current": "cosmo:index/federatedGraph:FederatedGraph",
-                "majorVersion": 1,
                 "fields": {
                     "label_matchers": {
                         "maxItemsOne": false
@@ -36,26 +32,21 @@
                 }
             },
             "cosmo_monograph": {
-                "current": "cosmo:index/monograph:Monograph",
-                "majorVersion": 1
+                "current": "cosmo:index/monograph:Monograph"
             },
             "cosmo_namespace": {
-                "current": "cosmo:index/namespace:Namespace",
-                "majorVersion": 1
+                "current": "cosmo:index/namespace:Namespace"
             },
             "cosmo_router_token": {
-                "current": "cosmo:index/routerToken:RouterToken",
-                "majorVersion": 1
+                "current": "cosmo:index/routerToken:RouterToken"
             },
             "cosmo_subgraph": {
-                "current": "cosmo:index/subgraph:Subgraph",
-                "majorVersion": 1
+                "current": "cosmo:index/subgraph:Subgraph"
             }
         },
         "datasources": {
             "cosmo_contract": {
                 "current": "cosmo:index/getContract:getContract",
-                "majorVersion": 1,
                 "fields": {
                     "exclude_tags": {
                         "maxItemsOne": false
@@ -67,7 +58,6 @@
             },
             "cosmo_feature_flag": {
                 "current": "cosmo:index/getFeatureFlag:getFeatureFlag",
-                "majorVersion": 1,
                 "fields": {
                     "feature_subgraphs": {
                         "maxItemsOne": false
@@ -75,16 +65,13 @@
                 }
             },
             "cosmo_feature_subgraph": {
-                "current": "cosmo:index/getFeatureSubgraph:getFeatureSubgraph",
-                "majorVersion": 1
+                "current": "cosmo:index/getFeatureSubgraph:getFeatureSubgraph"
             },
             "cosmo_federated_graph": {
-                "current": "cosmo:index/getFederatedGraph:getFederatedGraph",
-                "majorVersion": 1
+                "current": "cosmo:index/getFederatedGraph:getFederatedGraph"
             },
             "cosmo_monograph": {
                 "current": "cosmo:index/getMonograph:getMonograph",
-                "majorVersion": 1,
                 "fields": {
                     "label_matchers": {
                         "maxItemsOne": false
@@ -92,12 +79,10 @@
                 }
             },
             "cosmo_namespace": {
-                "current": "cosmo:index/getNamespace:getNamespace",
-                "majorVersion": 1
+                "current": "cosmo:index/getNamespace:getNamespace"
             },
             "cosmo_subgraph": {
                 "current": "cosmo:index/getSubgraph:getSubgraph",
-                "majorVersion": 1,
                 "fields": {
                     "headers": {
                         "maxItemsOne": false
