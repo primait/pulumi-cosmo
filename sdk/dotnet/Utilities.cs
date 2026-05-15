@@ -53,7 +53,7 @@ namespace Pulumi.Cosmo
         {
             var dst = src ?? new global::Pulumi.InvokeOptions{};
             dst.Version = src?.Version ?? Version;
-            dst.PluginDownloadURL = src?.PluginDownloadURL ?? "https://github.com/wundergraph/pulumi-cosmo/releases/download/v${VERSION}/";
+            dst.PluginDownloadURL = src?.PluginDownloadURL ?? "https://github.com/primait/pulumi-cosmo/releases/download/v${VERSION}/";
             return dst;
         }
 
@@ -61,7 +61,7 @@ namespace Pulumi.Cosmo
         {
             var dst = src ?? new global::Pulumi.InvokeOutputOptions{};
             dst.Version = src?.Version ?? Version;
-            dst.PluginDownloadURL = src?.PluginDownloadURL ?? "https://github.com/wundergraph/pulumi-cosmo/releases/download/v${VERSION}/";
+            dst.PluginDownloadURL = src?.PluginDownloadURL ?? "https://github.com/primait/pulumi-cosmo/releases/download/v${VERSION}/";
             return dst;
         }
 

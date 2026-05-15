@@ -51,7 +51,7 @@ func Provider() tfbridge.ProviderInfo {
 		DisplayName:       "Cosmo",
 		Publisher:         "WunderGraph",
 		LogoURL:           "",
-		PluginDownloadURL: "https://github.com/wundergraph/pulumi-cosmo/releases/download/v${VERSION}/",
+		PluginDownloadURL: "https://github.com/primait/pulumi-cosmo/releases/download/v${VERSION}/",
 		Description:       "A Pulumi package for creating and managing WunderGraph Cosmo resources.",
 		Keywords:          []string{"cosmo", "wundergraph", "category/cloud"},
 		License:           "Apache-2.0",

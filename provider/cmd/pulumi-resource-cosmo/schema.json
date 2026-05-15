@@ -11,7 +11,7 @@
     "license": "Apache-2.0",
     "attribution": "This Pulumi package is based on the [`cosmo` Terraform Provider](https://github.com/wundergraph/terraform-provider-cosmo).",
     "repository": "https://github.com/wundergraph/pulumi-cosmo",
-    "pluginDownloadURL": "https://github.com/wundergraph/pulumi-cosmo/releases/download/v${VERSION}/",
+    "pluginDownloadURL": "https://github.com/primait/pulumi-cosmo/releases/download/v${VERSION}/",
     "publisher": "WunderGraph",
     "meta": {
         "moduleFormat": "(.*)(?:/[^/]*)"

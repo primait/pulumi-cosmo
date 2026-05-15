@@ -59,7 +59,7 @@ namespace Pulumi.Cosmo
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
-                PluginDownloadURL = "https://github.com/wundergraph/pulumi-cosmo/releases/download/v${VERSION}/",
+                PluginDownloadURL = "https://github.com/primait/pulumi-cosmo/releases/download/v${VERSION}/",
                 AdditionalSecretOutputs =
                 {
                     "token",

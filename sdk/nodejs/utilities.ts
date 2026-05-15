@@ -53,7 +53,7 @@ export function getVersion(): string {
 
 /** @internal */
 export function resourceOptsDefaults(): any {
-    return { version: getVersion(), pluginDownloadURL: "https://github.com/wundergraph/pulumi-cosmo/releases/download/v${VERSION}/" };
+    return { version: getVersion(), pluginDownloadURL: "https://github.com/primait/pulumi-cosmo/releases/download/v${VERSION}/" };
 }
 
 /** @internal */
