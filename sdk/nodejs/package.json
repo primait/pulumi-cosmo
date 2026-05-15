@@ -1,6 +1,6 @@
 {
     "name": "@pulumi/cosmo",
-    "version": "1.0.0-alpha.0+dev",
+    "version": "0.0.2",
     "description": "A Pulumi package for creating and managing WunderGraph Cosmo resources.",
     "keywords": [
         "cosmo",
@@ -23,7 +23,7 @@
     "pulumi": {
         "resource": true,
         "name": "cosmo",
-        "version": "1.0.0-alpha.0+dev",
+        "version": "0.0.2",
         "server": "https://github.com/wundergraph/pulumi-cosmo/releases/download/v${VERSION}/"
     }
 }
