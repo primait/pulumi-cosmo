@@ -44,6 +44,10 @@ updates:
       interval: "weekly"
     cooldown:
       default-days: 7
+    groups:
+      golang:
+        patterns:
+          - "*"
 
   - package-ecosystem: "elm"
     directories:
