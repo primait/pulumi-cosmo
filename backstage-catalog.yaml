@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "pulumi-cosmo"
+  description: "cosmo Resource Provider"
+spec:
+  type: "library"
+  lifecycle: production
+  owner: "group:default/team-domain-sre"
+  system: prima.it
