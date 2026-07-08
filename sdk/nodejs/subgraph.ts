@@ -127,47 +127,47 @@ export interface SubgraphState {
     /**
      * Indicates if the subgraph is event-driven.
      */
-    isEventDrivenGraph?: pulumi.Input<boolean>;
+    isEventDrivenGraph?: pulumi.Input<boolean | undefined>;
     /**
      * Labels for the subgraph.
      */
-    labels?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
+    labels?: pulumi.Input<{[key: string]: pulumi.Input<string>} | undefined>;
     /**
      * The name of the subgraph.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The namespace in which the subgraph is located.
      */
-    namespace?: pulumi.Input<string>;
+    namespace?: pulumi.Input<string | undefined>;
     /**
      * The readme for the subgraph.
      */
-    readme?: pulumi.Input<string>;
+    readme?: pulumi.Input<string | undefined>;
     /**
      * The routing URL of the subgraph. Routing URL is required for normal subgraphs but not for event driven subgraphs.
      */
-    routingUrl?: pulumi.Input<string>;
+    routingUrl?: pulumi.Input<string | undefined>;
     /**
      * The schema for the subgraph.
      */
-    schema?: pulumi.Input<string>;
+    schema?: pulumi.Input<string | undefined>;
     /**
      * The subscription protocol for the subgraph.
      */
-    subscriptionProtocol?: pulumi.Input<string>;
+    subscriptionProtocol?: pulumi.Input<string | undefined>;
     /**
      * The subscription URL for the subgraph.
      */
-    subscriptionUrl?: pulumi.Input<string>;
+    subscriptionUrl?: pulumi.Input<string | undefined>;
     /**
      * Unset labels for the subgraph.
      */
-    unsetLabels?: pulumi.Input<boolean>;
+    unsetLabels?: pulumi.Input<boolean | undefined>;
     /**
      * The websocket subprotocol for the subgraph.
      */
-    websocketSubprotocol?: pulumi.Input<string>;
+    websocketSubprotocol?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -177,45 +177,45 @@ export interface SubgraphArgs {
     /**
      * Indicates if the subgraph is event-driven.
      */
-    isEventDrivenGraph?: pulumi.Input<boolean>;
+    isEventDrivenGraph?: pulumi.Input<boolean | undefined>;
     /**
      * Labels for the subgraph.
      */
-    labels?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
+    labels?: pulumi.Input<{[key: string]: pulumi.Input<string>} | undefined>;
     /**
      * The name of the subgraph.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The namespace in which the subgraph is located.
      */
-    namespace?: pulumi.Input<string>;
+    namespace?: pulumi.Input<string | undefined>;
     /**
      * The readme for the subgraph.
      */
-    readme?: pulumi.Input<string>;
+    readme?: pulumi.Input<string | undefined>;
     /**
      * The routing URL of the subgraph. Routing URL is required for normal subgraphs but not for event driven subgraphs.
      */
-    routingUrl?: pulumi.Input<string>;
+    routingUrl?: pulumi.Input<string | undefined>;
     /**
      * The schema for the subgraph.
      */
-    schema?: pulumi.Input<string>;
+    schema?: pulumi.Input<string | undefined>;
     /**
      * The subscription protocol for the subgraph.
      */
-    subscriptionProtocol?: pulumi.Input<string>;
+    subscriptionProtocol?: pulumi.Input<string | undefined>;
     /**
      * The subscription URL for the subgraph.
      */
-    subscriptionUrl?: pulumi.Input<string>;
+    subscriptionUrl?: pulumi.Input<string | undefined>;
     /**
      * Unset labels for the subgraph.
      */
-    unsetLabels?: pulumi.Input<boolean>;
+    unsetLabels?: pulumi.Input<boolean | undefined>;
     /**
      * The websocket subprotocol for the subgraph.
      */
-    websocketSubprotocol?: pulumi.Input<string>;
+    websocketSubprotocol?: pulumi.Input<string | undefined>;
 }

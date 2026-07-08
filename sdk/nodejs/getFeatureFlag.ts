@@ -47,5 +47,5 @@ export function getFeatureFlagOutput(args: GetFeatureFlagOutputArgs, opts?: pulu
  */
 export interface GetFeatureFlagOutputArgs {
     name: pulumi.Input<string>;
-    namespace?: pulumi.Input<string>;
+    namespace?: pulumi.Input<string | undefined>;
 }

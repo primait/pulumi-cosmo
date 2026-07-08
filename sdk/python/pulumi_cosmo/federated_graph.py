@@ -20,12 +20,12 @@ __all__ = ['FederatedGraphArgs', 'FederatedGraph']
 class FederatedGraphArgs:
     def __init__(__self__, *,
                  routing_url: pulumi.Input[_builtins.str],
-                 admission_webhook_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 admission_webhook_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 label_matchers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 namespace: Optional[pulumi.Input[_builtins.str]] = None,
-                 readme: Optional[pulumi.Input[_builtins.str]] = None):
+                 admission_webhook_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 admission_webhook_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 label_matchers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 namespace: pulumi.Input[Optional[_builtins.str]] = None,
+                 readme: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a FederatedGraph resource.
 
@@ -65,87 +65,87 @@ class FederatedGraphArgs:
 
     @_builtins.property
     @pulumi.getter(name="admissionWebhookSecret")
-    def admission_webhook_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def admission_webhook_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The secret token used to authenticate the admission webhook requests.
         """
         return pulumi.get(self, "admission_webhook_secret")
 
     @admission_webhook_secret.setter
-    def admission_webhook_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def admission_webhook_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "admission_webhook_secret", value)
 
     @_builtins.property
     @pulumi.getter(name="admissionWebhookUrl")
-    def admission_webhook_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def admission_webhook_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The URL for the admission webhook that will be triggered during graph operations.
         """
         return pulumi.get(self, "admission_webhook_url")
 
     @admission_webhook_url.setter
-    def admission_webhook_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def admission_webhook_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "admission_webhook_url", value)
 
     @_builtins.property
     @pulumi.getter(name="labelMatchers")
-    def label_matchers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def label_matchers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         A list of label matchers used to select the services that will form the federated graph.
         """
         return pulumi.get(self, "label_matchers")
 
     @label_matchers.setter
-    def label_matchers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def label_matchers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "label_matchers", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the federated graph. This is used to identify the graph and must be unique within the namespace.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def namespace(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def namespace(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The namespace in which the federated graph is located. Defaults to 'default' if not provided.
         """
         return pulumi.get(self, "namespace")
 
     @namespace.setter
-    def namespace(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def namespace(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "namespace", value)
 
     @_builtins.property
     @pulumi.getter
-    def readme(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def readme(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Readme content for the federated graph.
         """
         return pulumi.get(self, "readme")
 
     @readme.setter
-    def readme(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def readme(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "readme", value)
 
 
 @pulumi.input_type
 class _FederatedGraphState:
     def __init__(__self__, *,
-                 admission_webhook_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 admission_webhook_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 label_matchers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 namespace: Optional[pulumi.Input[_builtins.str]] = None,
-                 readme: Optional[pulumi.Input[_builtins.str]] = None,
-                 routing_url: Optional[pulumi.Input[_builtins.str]] = None):
+                 admission_webhook_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 admission_webhook_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 label_matchers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 namespace: pulumi.Input[Optional[_builtins.str]] = None,
+                 readme: pulumi.Input[Optional[_builtins.str]] = None,
+                 routing_url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering FederatedGraph resources.
 
@@ -174,86 +174,86 @@ class _FederatedGraphState:
 
     @_builtins.property
     @pulumi.getter(name="admissionWebhookSecret")
-    def admission_webhook_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def admission_webhook_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The secret token used to authenticate the admission webhook requests.
         """
         return pulumi.get(self, "admission_webhook_secret")
 
     @admission_webhook_secret.setter
-    def admission_webhook_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def admission_webhook_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "admission_webhook_secret", value)
 
     @_builtins.property
     @pulumi.getter(name="admissionWebhookUrl")
-    def admission_webhook_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def admission_webhook_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The URL for the admission webhook that will be triggered during graph operations.
         """
         return pulumi.get(self, "admission_webhook_url")
 
     @admission_webhook_url.setter
-    def admission_webhook_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def admission_webhook_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "admission_webhook_url", value)
 
     @_builtins.property
     @pulumi.getter(name="labelMatchers")
-    def label_matchers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def label_matchers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         A list of label matchers used to select the services that will form the federated graph.
         """
         return pulumi.get(self, "label_matchers")
 
     @label_matchers.setter
-    def label_matchers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def label_matchers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "label_matchers", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the federated graph. This is used to identify the graph and must be unique within the namespace.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def namespace(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def namespace(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The namespace in which the federated graph is located. Defaults to 'default' if not provided.
         """
         return pulumi.get(self, "namespace")
 
     @namespace.setter
-    def namespace(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def namespace(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "namespace", value)
 
     @_builtins.property
     @pulumi.getter
-    def readme(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def readme(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Readme content for the federated graph.
         """
         return pulumi.get(self, "readme")
 
     @readme.setter
-    def readme(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def readme(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "readme", value)
 
     @_builtins.property
     @pulumi.getter(name="routingUrl")
-    def routing_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def routing_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The URL of the service that routes requests to the federated graph.
         """
         return pulumi.get(self, "routing_url")
 
     @routing_url.setter
-    def routing_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def routing_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "routing_url", value)
 
 
@@ -263,13 +263,13 @@ class FederatedGraph(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 admission_webhook_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 admission_webhook_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 label_matchers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 namespace: Optional[pulumi.Input[_builtins.str]] = None,
-                 readme: Optional[pulumi.Input[_builtins.str]] = None,
-                 routing_url: Optional[pulumi.Input[_builtins.str]] = None,
+                 admission_webhook_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 admission_webhook_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 label_matchers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 namespace: pulumi.Input[Optional[_builtins.str]] = None,
+                 readme: pulumi.Input[Optional[_builtins.str]] = None,
+                 routing_url: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         Create a FederatedGraph resource with the given unique name, props, and options.
@@ -308,13 +308,13 @@ class FederatedGraph(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 admission_webhook_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 admission_webhook_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 label_matchers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 namespace: Optional[pulumi.Input[_builtins.str]] = None,
-                 readme: Optional[pulumi.Input[_builtins.str]] = None,
-                 routing_url: Optional[pulumi.Input[_builtins.str]] = None,
+                 admission_webhook_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 admission_webhook_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 label_matchers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 namespace: pulumi.Input[Optional[_builtins.str]] = None,
+                 readme: pulumi.Input[Optional[_builtins.str]] = None,
+                 routing_url: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -345,13 +345,13 @@ class FederatedGraph(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            admission_webhook_secret: Optional[pulumi.Input[_builtins.str]] = None,
-            admission_webhook_url: Optional[pulumi.Input[_builtins.str]] = None,
-            label_matchers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            namespace: Optional[pulumi.Input[_builtins.str]] = None,
-            readme: Optional[pulumi.Input[_builtins.str]] = None,
-            routing_url: Optional[pulumi.Input[_builtins.str]] = None) -> 'FederatedGraph':
+            admission_webhook_secret: pulumi.Input[Optional[_builtins.str]] = None,
+            admission_webhook_url: pulumi.Input[Optional[_builtins.str]] = None,
+            label_matchers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            namespace: pulumi.Input[Optional[_builtins.str]] = None,
+            readme: pulumi.Input[Optional[_builtins.str]] = None,
+            routing_url: pulumi.Input[Optional[_builtins.str]] = None) -> 'FederatedGraph':
         """
         Get an existing FederatedGraph resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

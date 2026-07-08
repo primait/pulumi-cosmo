@@ -150,8 +150,8 @@ def get_feature_subgraph(name: Optional[_builtins.str] = None,
         subscription_protocol=pulumi.get(__ret__, 'subscription_protocol'),
         subscription_url=pulumi.get(__ret__, 'subscription_url'),
         websocket_subprotocol=pulumi.get(__ret__, 'websocket_subprotocol'))
-def get_feature_subgraph_output(name: Optional[pulumi.Input[_builtins.str]] = None,
-                                namespace: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_feature_subgraph_output(name: pulumi.Input[Optional[_builtins.str]] = None,
+                                namespace: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetFeatureSubgraphResult]:
     """
     Use this data source to access information about an existing resource.

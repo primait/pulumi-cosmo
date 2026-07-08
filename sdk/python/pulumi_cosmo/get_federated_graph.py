@@ -130,8 +130,8 @@ def get_federated_graph(name: Optional[_builtins.str] = None,
         namespace=pulumi.get(__ret__, 'namespace'),
         readme=pulumi.get(__ret__, 'readme'),
         routing_url=pulumi.get(__ret__, 'routing_url'))
-def get_federated_graph_output(name: Optional[pulumi.Input[_builtins.str]] = None,
-                               namespace: Optional[pulumi.Input[_builtins.str]] = None,
+def get_federated_graph_output(name: pulumi.Input[Optional[_builtins.str]] = None,
+                               namespace: pulumi.Input[Optional[_builtins.str]] = None,
                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetFederatedGraphResult]:
     """
     Use this data source to access information about an existing resource.

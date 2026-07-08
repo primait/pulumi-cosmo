@@ -19,8 +19,8 @@ __all__ = ['ProviderArgs', 'Provider']
 @pulumi.input_type
 class ProviderArgs:
     def __init__(__self__, *,
-                 api_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 api_url: Optional[pulumi.Input[_builtins.str]] = None):
+                 api_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 api_url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a Provider resource.
 
@@ -34,26 +34,26 @@ class ProviderArgs:
 
     @_builtins.property
     @pulumi.getter(name="apiKey")
-    def api_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def api_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Api Key to be used: Leave blank to use the COSMO_API_KEY environment variable
         """
         return pulumi.get(self, "api_key")
 
     @api_key.setter
-    def api_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def api_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "api_key", value)
 
     @_builtins.property
     @pulumi.getter(name="apiUrl")
-    def api_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def api_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Api Url to be used: Leave blank to use: https://cosmo-cp.wundergraph.com or use the COSMO_API_URL environment variable
         """
         return pulumi.get(self, "api_url")
 
     @api_url.setter
-    def api_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def api_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "api_url", value)
 
 
@@ -63,8 +63,8 @@ class Provider(pulumi.ProviderResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 api_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 api_url: Optional[pulumi.Input[_builtins.str]] = None,
+                 api_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 api_url: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         The provider type for the cosmo package. By default, resources use package-wide configuration
@@ -106,8 +106,8 @@ class Provider(pulumi.ProviderResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 api_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 api_url: Optional[pulumi.Input[_builtins.str]] = None,
+                 api_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 api_url: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):

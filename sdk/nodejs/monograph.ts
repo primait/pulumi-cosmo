@@ -133,47 +133,47 @@ export interface MonographState {
     /**
      * The admission webhook secret for the monograph.
      */
-    admissionWebhookSecret?: pulumi.Input<string>;
+    admissionWebhookSecret?: pulumi.Input<string | undefined>;
     /**
      * The admission webhook URL for the monograph.
      */
-    admissionWebhookUrl?: pulumi.Input<string>;
+    admissionWebhookUrl?: pulumi.Input<string | undefined>;
     /**
      * The GraphQL endpoint URL of the monograph.
      */
-    graphUrl?: pulumi.Input<string>;
+    graphUrl?: pulumi.Input<string | undefined>;
     /**
      * The name of the monograph.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The namespace in which the monograph is located.
      */
-    namespace?: pulumi.Input<string>;
+    namespace?: pulumi.Input<string | undefined>;
     /**
      * The readme for the subgraph.
      */
-    readme?: pulumi.Input<string>;
+    readme?: pulumi.Input<string | undefined>;
     /**
      * The routing URL for the monograph.
      */
-    routingUrl?: pulumi.Input<string>;
+    routingUrl?: pulumi.Input<string | undefined>;
     /**
      * The schema for the subgraph.
      */
-    schema?: pulumi.Input<string>;
+    schema?: pulumi.Input<string | undefined>;
     /**
      * The subscription protocol for the subgraph.
      */
-    subscriptionProtocol?: pulumi.Input<string>;
+    subscriptionProtocol?: pulumi.Input<string | undefined>;
     /**
      * The subscription URL for the subgraph.
      */
-    subscriptionUrl?: pulumi.Input<string>;
+    subscriptionUrl?: pulumi.Input<string | undefined>;
     /**
      * The websocket subprotocol for the subgraph.
      */
-    websocketSubprotocol?: pulumi.Input<string>;
+    websocketSubprotocol?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -183,11 +183,11 @@ export interface MonographArgs {
     /**
      * The admission webhook secret for the monograph.
      */
-    admissionWebhookSecret?: pulumi.Input<string>;
+    admissionWebhookSecret?: pulumi.Input<string | undefined>;
     /**
      * The admission webhook URL for the monograph.
      */
-    admissionWebhookUrl?: pulumi.Input<string>;
+    admissionWebhookUrl?: pulumi.Input<string | undefined>;
     /**
      * The GraphQL endpoint URL of the monograph.
      */
@@ -195,15 +195,15 @@ export interface MonographArgs {
     /**
      * The name of the monograph.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The namespace in which the monograph is located.
      */
-    namespace?: pulumi.Input<string>;
+    namespace?: pulumi.Input<string | undefined>;
     /**
      * The readme for the subgraph.
      */
-    readme?: pulumi.Input<string>;
+    readme?: pulumi.Input<string | undefined>;
     /**
      * The routing URL for the monograph.
      */
@@ -211,17 +211,17 @@ export interface MonographArgs {
     /**
      * The schema for the subgraph.
      */
-    schema?: pulumi.Input<string>;
+    schema?: pulumi.Input<string | undefined>;
     /**
      * The subscription protocol for the subgraph.
      */
-    subscriptionProtocol?: pulumi.Input<string>;
+    subscriptionProtocol?: pulumi.Input<string | undefined>;
     /**
      * The subscription URL for the subgraph.
      */
-    subscriptionUrl?: pulumi.Input<string>;
+    subscriptionUrl?: pulumi.Input<string | undefined>;
     /**
      * The websocket subprotocol for the subgraph.
      */
-    websocketSubprotocol?: pulumi.Input<string>;
+    websocketSubprotocol?: pulumi.Input<string | undefined>;
 }

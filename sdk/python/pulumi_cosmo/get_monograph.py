@@ -150,8 +150,8 @@ def get_monograph(name: Optional[_builtins.str] = None,
         routing_url=pulumi.get(__ret__, 'routing_url'),
         subscription_protocol=pulumi.get(__ret__, 'subscription_protocol'),
         websocket_subprotocol=pulumi.get(__ret__, 'websocket_subprotocol'))
-def get_monograph_output(name: Optional[pulumi.Input[_builtins.str]] = None,
-                         namespace: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_monograph_output(name: pulumi.Input[Optional[_builtins.str]] = None,
+                         namespace: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetMonographResult]:
     """
     Use this data source to access information about an existing resource.
