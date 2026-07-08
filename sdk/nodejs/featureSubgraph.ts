@@ -121,39 +121,39 @@ export interface FeatureSubgraphState {
     /**
      * The name of the base subgraph that this feature subgraph extends.
      */
-    baseSubgraphName?: pulumi.Input<string>;
+    baseSubgraphName?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature subgraph.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The namespace to create the feature subgraph in.
      */
-    namespace?: pulumi.Input<string>;
+    namespace?: pulumi.Input<string | undefined>;
     /**
      * The readme for the subgraph.
      */
-    readme?: pulumi.Input<string>;
+    readme?: pulumi.Input<string | undefined>;
     /**
      * The routing URL of the feature subgraph.
      */
-    routingUrl?: pulumi.Input<string>;
+    routingUrl?: pulumi.Input<string | undefined>;
     /**
      * The schema for the subgraph.
      */
-    schema?: pulumi.Input<string>;
+    schema?: pulumi.Input<string | undefined>;
     /**
      * The subscription protocol for the subgraph.
      */
-    subscriptionProtocol?: pulumi.Input<string>;
+    subscriptionProtocol?: pulumi.Input<string | undefined>;
     /**
      * The subscription URL for the subgraph.
      */
-    subscriptionUrl?: pulumi.Input<string>;
+    subscriptionUrl?: pulumi.Input<string | undefined>;
     /**
      * The websocket subprotocol for the subgraph.
      */
-    websocketSubprotocol?: pulumi.Input<string>;
+    websocketSubprotocol?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -167,15 +167,15 @@ export interface FeatureSubgraphArgs {
     /**
      * The name of the feature subgraph.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The namespace to create the feature subgraph in.
      */
-    namespace?: pulumi.Input<string>;
+    namespace?: pulumi.Input<string | undefined>;
     /**
      * The readme for the subgraph.
      */
-    readme?: pulumi.Input<string>;
+    readme?: pulumi.Input<string | undefined>;
     /**
      * The routing URL of the feature subgraph.
      */
@@ -183,17 +183,17 @@ export interface FeatureSubgraphArgs {
     /**
      * The schema for the subgraph.
      */
-    schema?: pulumi.Input<string>;
+    schema?: pulumi.Input<string | undefined>;
     /**
      * The subscription protocol for the subgraph.
      */
-    subscriptionProtocol?: pulumi.Input<string>;
+    subscriptionProtocol?: pulumi.Input<string | undefined>;
     /**
      * The subscription URL for the subgraph.
      */
-    subscriptionUrl?: pulumi.Input<string>;
+    subscriptionUrl?: pulumi.Input<string | undefined>;
     /**
      * The websocket subprotocol for the subgraph.
      */
-    websocketSubprotocol?: pulumi.Input<string>;
+    websocketSubprotocol?: pulumi.Input<string | undefined>;
 }

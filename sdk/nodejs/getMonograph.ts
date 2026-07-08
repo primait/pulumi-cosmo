@@ -48,5 +48,5 @@ export function getMonographOutput(args: GetMonographOutputArgs, opts?: pulumi.I
  */
 export interface GetMonographOutputArgs {
     name: pulumi.Input<string>;
-    namespace?: pulumi.Input<string>;
+    namespace?: pulumi.Input<string | undefined>;
 }

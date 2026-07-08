@@ -19,17 +19,17 @@ __all__ = ['SubgraphArgs', 'Subgraph']
 @pulumi.input_type
 class SubgraphArgs:
     def __init__(__self__, *,
-                 is_event_driven_graph: Optional[pulumi.Input[_builtins.bool]] = None,
-                 labels: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 namespace: Optional[pulumi.Input[_builtins.str]] = None,
-                 readme: Optional[pulumi.Input[_builtins.str]] = None,
-                 routing_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 schema: Optional[pulumi.Input[_builtins.str]] = None,
-                 subscription_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 subscription_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 unset_labels: Optional[pulumi.Input[_builtins.bool]] = None,
-                 websocket_subprotocol: Optional[pulumi.Input[_builtins.str]] = None):
+                 is_event_driven_graph: pulumi.Input[Optional[_builtins.bool]] = None,
+                 labels: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 namespace: pulumi.Input[Optional[_builtins.str]] = None,
+                 readme: pulumi.Input[Optional[_builtins.str]] = None,
+                 routing_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 schema: pulumi.Input[Optional[_builtins.str]] = None,
+                 subscription_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 subscription_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 unset_labels: pulumi.Input[Optional[_builtins.bool]] = None,
+                 websocket_subprotocol: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a Subgraph resource.
 
@@ -70,151 +70,151 @@ class SubgraphArgs:
 
     @_builtins.property
     @pulumi.getter(name="isEventDrivenGraph")
-    def is_event_driven_graph(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_event_driven_graph(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Indicates if the subgraph is event-driven.
         """
         return pulumi.get(self, "is_event_driven_graph")
 
     @is_event_driven_graph.setter
-    def is_event_driven_graph(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_event_driven_graph(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_event_driven_graph", value)
 
     @_builtins.property
     @pulumi.getter
-    def labels(self) -> Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]:
+    def labels(self) -> pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]:
         """
         Labels for the subgraph.
         """
         return pulumi.get(self, "labels")
 
     @labels.setter
-    def labels(self, value: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]):
+    def labels(self, value: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "labels", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the subgraph.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def namespace(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def namespace(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The namespace in which the subgraph is located.
         """
         return pulumi.get(self, "namespace")
 
     @namespace.setter
-    def namespace(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def namespace(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "namespace", value)
 
     @_builtins.property
     @pulumi.getter
-    def readme(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def readme(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The readme for the subgraph.
         """
         return pulumi.get(self, "readme")
 
     @readme.setter
-    def readme(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def readme(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "readme", value)
 
     @_builtins.property
     @pulumi.getter(name="routingUrl")
-    def routing_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def routing_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The routing URL of the subgraph. Routing URL is required for normal subgraphs but not for event driven subgraphs.
         """
         return pulumi.get(self, "routing_url")
 
     @routing_url.setter
-    def routing_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def routing_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "routing_url", value)
 
     @_builtins.property
     @pulumi.getter
-    def schema(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def schema(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The schema for the subgraph.
         """
         return pulumi.get(self, "schema")
 
     @schema.setter
-    def schema(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def schema(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "schema", value)
 
     @_builtins.property
     @pulumi.getter(name="subscriptionProtocol")
-    def subscription_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subscription_protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The subscription protocol for the subgraph.
         """
         return pulumi.get(self, "subscription_protocol")
 
     @subscription_protocol.setter
-    def subscription_protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subscription_protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subscription_protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="subscriptionUrl")
-    def subscription_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subscription_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The subscription URL for the subgraph.
         """
         return pulumi.get(self, "subscription_url")
 
     @subscription_url.setter
-    def subscription_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subscription_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subscription_url", value)
 
     @_builtins.property
     @pulumi.getter(name="unsetLabels")
-    def unset_labels(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def unset_labels(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Unset labels for the subgraph.
         """
         return pulumi.get(self, "unset_labels")
 
     @unset_labels.setter
-    def unset_labels(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def unset_labels(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "unset_labels", value)
 
     @_builtins.property
     @pulumi.getter(name="websocketSubprotocol")
-    def websocket_subprotocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def websocket_subprotocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The websocket subprotocol for the subgraph.
         """
         return pulumi.get(self, "websocket_subprotocol")
 
     @websocket_subprotocol.setter
-    def websocket_subprotocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def websocket_subprotocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "websocket_subprotocol", value)
 
 
 @pulumi.input_type
 class _SubgraphState:
     def __init__(__self__, *,
-                 is_event_driven_graph: Optional[pulumi.Input[_builtins.bool]] = None,
-                 labels: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 namespace: Optional[pulumi.Input[_builtins.str]] = None,
-                 readme: Optional[pulumi.Input[_builtins.str]] = None,
-                 routing_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 schema: Optional[pulumi.Input[_builtins.str]] = None,
-                 subscription_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 subscription_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 unset_labels: Optional[pulumi.Input[_builtins.bool]] = None,
-                 websocket_subprotocol: Optional[pulumi.Input[_builtins.str]] = None):
+                 is_event_driven_graph: pulumi.Input[Optional[_builtins.bool]] = None,
+                 labels: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 namespace: pulumi.Input[Optional[_builtins.str]] = None,
+                 readme: pulumi.Input[Optional[_builtins.str]] = None,
+                 routing_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 schema: pulumi.Input[Optional[_builtins.str]] = None,
+                 subscription_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 subscription_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 unset_labels: pulumi.Input[Optional[_builtins.bool]] = None,
+                 websocket_subprotocol: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Subgraph resources.
 
@@ -255,134 +255,134 @@ class _SubgraphState:
 
     @_builtins.property
     @pulumi.getter(name="isEventDrivenGraph")
-    def is_event_driven_graph(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_event_driven_graph(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Indicates if the subgraph is event-driven.
         """
         return pulumi.get(self, "is_event_driven_graph")
 
     @is_event_driven_graph.setter
-    def is_event_driven_graph(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_event_driven_graph(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_event_driven_graph", value)
 
     @_builtins.property
     @pulumi.getter
-    def labels(self) -> Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]:
+    def labels(self) -> pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]:
         """
         Labels for the subgraph.
         """
         return pulumi.get(self, "labels")
 
     @labels.setter
-    def labels(self, value: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]):
+    def labels(self, value: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "labels", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the subgraph.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def namespace(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def namespace(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The namespace in which the subgraph is located.
         """
         return pulumi.get(self, "namespace")
 
     @namespace.setter
-    def namespace(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def namespace(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "namespace", value)
 
     @_builtins.property
     @pulumi.getter
-    def readme(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def readme(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The readme for the subgraph.
         """
         return pulumi.get(self, "readme")
 
     @readme.setter
-    def readme(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def readme(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "readme", value)
 
     @_builtins.property
     @pulumi.getter(name="routingUrl")
-    def routing_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def routing_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The routing URL of the subgraph. Routing URL is required for normal subgraphs but not for event driven subgraphs.
         """
         return pulumi.get(self, "routing_url")
 
     @routing_url.setter
-    def routing_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def routing_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "routing_url", value)
 
     @_builtins.property
     @pulumi.getter
-    def schema(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def schema(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The schema for the subgraph.
         """
         return pulumi.get(self, "schema")
 
     @schema.setter
-    def schema(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def schema(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "schema", value)
 
     @_builtins.property
     @pulumi.getter(name="subscriptionProtocol")
-    def subscription_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subscription_protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The subscription protocol for the subgraph.
         """
         return pulumi.get(self, "subscription_protocol")
 
     @subscription_protocol.setter
-    def subscription_protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subscription_protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subscription_protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="subscriptionUrl")
-    def subscription_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subscription_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The subscription URL for the subgraph.
         """
         return pulumi.get(self, "subscription_url")
 
     @subscription_url.setter
-    def subscription_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subscription_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subscription_url", value)
 
     @_builtins.property
     @pulumi.getter(name="unsetLabels")
-    def unset_labels(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def unset_labels(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Unset labels for the subgraph.
         """
         return pulumi.get(self, "unset_labels")
 
     @unset_labels.setter
-    def unset_labels(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def unset_labels(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "unset_labels", value)
 
     @_builtins.property
     @pulumi.getter(name="websocketSubprotocol")
-    def websocket_subprotocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def websocket_subprotocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The websocket subprotocol for the subgraph.
         """
         return pulumi.get(self, "websocket_subprotocol")
 
     @websocket_subprotocol.setter
-    def websocket_subprotocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def websocket_subprotocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "websocket_subprotocol", value)
 
 
@@ -392,17 +392,17 @@ class Subgraph(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 is_event_driven_graph: Optional[pulumi.Input[_builtins.bool]] = None,
-                 labels: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 namespace: Optional[pulumi.Input[_builtins.str]] = None,
-                 readme: Optional[pulumi.Input[_builtins.str]] = None,
-                 routing_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 schema: Optional[pulumi.Input[_builtins.str]] = None,
-                 subscription_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 subscription_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 unset_labels: Optional[pulumi.Input[_builtins.bool]] = None,
-                 websocket_subprotocol: Optional[pulumi.Input[_builtins.str]] = None,
+                 is_event_driven_graph: pulumi.Input[Optional[_builtins.bool]] = None,
+                 labels: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 namespace: pulumi.Input[Optional[_builtins.str]] = None,
+                 readme: pulumi.Input[Optional[_builtins.str]] = None,
+                 routing_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 schema: pulumi.Input[Optional[_builtins.str]] = None,
+                 subscription_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 subscription_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 unset_labels: pulumi.Input[Optional[_builtins.bool]] = None,
+                 websocket_subprotocol: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         Create a Subgraph resource with the given unique name, props, and options.
@@ -445,17 +445,17 @@ class Subgraph(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 is_event_driven_graph: Optional[pulumi.Input[_builtins.bool]] = None,
-                 labels: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 namespace: Optional[pulumi.Input[_builtins.str]] = None,
-                 readme: Optional[pulumi.Input[_builtins.str]] = None,
-                 routing_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 schema: Optional[pulumi.Input[_builtins.str]] = None,
-                 subscription_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 subscription_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 unset_labels: Optional[pulumi.Input[_builtins.bool]] = None,
-                 websocket_subprotocol: Optional[pulumi.Input[_builtins.str]] = None,
+                 is_event_driven_graph: pulumi.Input[Optional[_builtins.bool]] = None,
+                 labels: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 namespace: pulumi.Input[Optional[_builtins.str]] = None,
+                 readme: pulumi.Input[Optional[_builtins.str]] = None,
+                 routing_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 schema: pulumi.Input[Optional[_builtins.str]] = None,
+                 subscription_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 subscription_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 unset_labels: pulumi.Input[Optional[_builtins.bool]] = None,
+                 websocket_subprotocol: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -486,17 +486,17 @@ class Subgraph(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            is_event_driven_graph: Optional[pulumi.Input[_builtins.bool]] = None,
-            labels: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            namespace: Optional[pulumi.Input[_builtins.str]] = None,
-            readme: Optional[pulumi.Input[_builtins.str]] = None,
-            routing_url: Optional[pulumi.Input[_builtins.str]] = None,
-            schema: Optional[pulumi.Input[_builtins.str]] = None,
-            subscription_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-            subscription_url: Optional[pulumi.Input[_builtins.str]] = None,
-            unset_labels: Optional[pulumi.Input[_builtins.bool]] = None,
-            websocket_subprotocol: Optional[pulumi.Input[_builtins.str]] = None) -> 'Subgraph':
+            is_event_driven_graph: pulumi.Input[Optional[_builtins.bool]] = None,
+            labels: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            namespace: pulumi.Input[Optional[_builtins.str]] = None,
+            readme: pulumi.Input[Optional[_builtins.str]] = None,
+            routing_url: pulumi.Input[Optional[_builtins.str]] = None,
+            schema: pulumi.Input[Optional[_builtins.str]] = None,
+            subscription_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+            subscription_url: pulumi.Input[Optional[_builtins.str]] = None,
+            unset_labels: pulumi.Input[Optional[_builtins.bool]] = None,
+            websocket_subprotocol: pulumi.Input[Optional[_builtins.str]] = None) -> 'Subgraph':
         """
         Get an existing Subgraph resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

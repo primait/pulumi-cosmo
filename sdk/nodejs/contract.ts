@@ -97,30 +97,30 @@ export class Contract extends pulumi.CustomResource {
  * Input properties used for looking up and filtering Contract resources.
  */
 export interface ContractState {
-    admissionWebhookSecret?: pulumi.Input<string>;
-    admissionWebhookUrl?: pulumi.Input<string>;
-    excludeTags?: pulumi.Input<pulumi.Input<string>[]>;
-    includeTags?: pulumi.Input<pulumi.Input<string>[]>;
-    name?: pulumi.Input<string>;
-    namespace?: pulumi.Input<string>;
-    readme?: pulumi.Input<string>;
-    routingUrl?: pulumi.Input<string>;
-    source?: pulumi.Input<string>;
-    supportsFederation?: pulumi.Input<boolean>;
+    admissionWebhookSecret?: pulumi.Input<string | undefined>;
+    admissionWebhookUrl?: pulumi.Input<string | undefined>;
+    excludeTags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    includeTags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    name?: pulumi.Input<string | undefined>;
+    namespace?: pulumi.Input<string | undefined>;
+    readme?: pulumi.Input<string | undefined>;
+    routingUrl?: pulumi.Input<string | undefined>;
+    source?: pulumi.Input<string | undefined>;
+    supportsFederation?: pulumi.Input<boolean | undefined>;
 }
 
 /**
  * The set of arguments for constructing a Contract resource.
  */
 export interface ContractArgs {
-    admissionWebhookSecret?: pulumi.Input<string>;
-    admissionWebhookUrl?: pulumi.Input<string>;
-    excludeTags?: pulumi.Input<pulumi.Input<string>[]>;
-    includeTags?: pulumi.Input<pulumi.Input<string>[]>;
-    name?: pulumi.Input<string>;
+    admissionWebhookSecret?: pulumi.Input<string | undefined>;
+    admissionWebhookUrl?: pulumi.Input<string | undefined>;
+    excludeTags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    includeTags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    name?: pulumi.Input<string | undefined>;
     namespace: pulumi.Input<string>;
-    readme?: pulumi.Input<string>;
+    readme?: pulumi.Input<string | undefined>;
     routingUrl: pulumi.Input<string>;
     source: pulumi.Input<string>;
-    supportsFederation?: pulumi.Input<boolean>;
+    supportsFederation?: pulumi.Input<boolean | undefined>;
 }

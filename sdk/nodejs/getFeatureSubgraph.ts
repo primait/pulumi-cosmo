@@ -48,5 +48,5 @@ export function getFeatureSubgraphOutput(args: GetFeatureSubgraphOutputArgs, opt
  */
 export interface GetFeatureSubgraphOutputArgs {
     name: pulumi.Input<string>;
-    namespace?: pulumi.Input<string>;
+    namespace?: pulumi.Input<string | undefined>;
 }

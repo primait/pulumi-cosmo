@@ -21,15 +21,15 @@ class MonographArgs:
     def __init__(__self__, *,
                  graph_url: pulumi.Input[_builtins.str],
                  routing_url: pulumi.Input[_builtins.str],
-                 admission_webhook_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 admission_webhook_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 namespace: Optional[pulumi.Input[_builtins.str]] = None,
-                 readme: Optional[pulumi.Input[_builtins.str]] = None,
-                 schema: Optional[pulumi.Input[_builtins.str]] = None,
-                 subscription_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 subscription_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 websocket_subprotocol: Optional[pulumi.Input[_builtins.str]] = None):
+                 admission_webhook_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 admission_webhook_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 namespace: pulumi.Input[Optional[_builtins.str]] = None,
+                 readme: pulumi.Input[Optional[_builtins.str]] = None,
+                 schema: pulumi.Input[Optional[_builtins.str]] = None,
+                 subscription_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 subscription_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 websocket_subprotocol: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a Monograph resource.
 
@@ -92,127 +92,127 @@ class MonographArgs:
 
     @_builtins.property
     @pulumi.getter(name="admissionWebhookSecret")
-    def admission_webhook_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def admission_webhook_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The admission webhook secret for the monograph.
         """
         return pulumi.get(self, "admission_webhook_secret")
 
     @admission_webhook_secret.setter
-    def admission_webhook_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def admission_webhook_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "admission_webhook_secret", value)
 
     @_builtins.property
     @pulumi.getter(name="admissionWebhookUrl")
-    def admission_webhook_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def admission_webhook_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The admission webhook URL for the monograph.
         """
         return pulumi.get(self, "admission_webhook_url")
 
     @admission_webhook_url.setter
-    def admission_webhook_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def admission_webhook_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "admission_webhook_url", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the monograph.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def namespace(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def namespace(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The namespace in which the monograph is located.
         """
         return pulumi.get(self, "namespace")
 
     @namespace.setter
-    def namespace(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def namespace(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "namespace", value)
 
     @_builtins.property
     @pulumi.getter
-    def readme(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def readme(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The readme for the subgraph.
         """
         return pulumi.get(self, "readme")
 
     @readme.setter
-    def readme(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def readme(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "readme", value)
 
     @_builtins.property
     @pulumi.getter
-    def schema(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def schema(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The schema for the subgraph.
         """
         return pulumi.get(self, "schema")
 
     @schema.setter
-    def schema(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def schema(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "schema", value)
 
     @_builtins.property
     @pulumi.getter(name="subscriptionProtocol")
-    def subscription_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subscription_protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The subscription protocol for the subgraph.
         """
         return pulumi.get(self, "subscription_protocol")
 
     @subscription_protocol.setter
-    def subscription_protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subscription_protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subscription_protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="subscriptionUrl")
-    def subscription_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subscription_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The subscription URL for the subgraph.
         """
         return pulumi.get(self, "subscription_url")
 
     @subscription_url.setter
-    def subscription_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subscription_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subscription_url", value)
 
     @_builtins.property
     @pulumi.getter(name="websocketSubprotocol")
-    def websocket_subprotocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def websocket_subprotocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The websocket subprotocol for the subgraph.
         """
         return pulumi.get(self, "websocket_subprotocol")
 
     @websocket_subprotocol.setter
-    def websocket_subprotocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def websocket_subprotocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "websocket_subprotocol", value)
 
 
 @pulumi.input_type
 class _MonographState:
     def __init__(__self__, *,
-                 admission_webhook_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 admission_webhook_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 graph_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 namespace: Optional[pulumi.Input[_builtins.str]] = None,
-                 readme: Optional[pulumi.Input[_builtins.str]] = None,
-                 routing_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 schema: Optional[pulumi.Input[_builtins.str]] = None,
-                 subscription_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 subscription_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 websocket_subprotocol: Optional[pulumi.Input[_builtins.str]] = None):
+                 admission_webhook_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 admission_webhook_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 graph_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 namespace: pulumi.Input[Optional[_builtins.str]] = None,
+                 readme: pulumi.Input[Optional[_builtins.str]] = None,
+                 routing_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 schema: pulumi.Input[Optional[_builtins.str]] = None,
+                 subscription_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 subscription_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 websocket_subprotocol: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Monograph resources.
 
@@ -253,134 +253,134 @@ class _MonographState:
 
     @_builtins.property
     @pulumi.getter(name="admissionWebhookSecret")
-    def admission_webhook_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def admission_webhook_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The admission webhook secret for the monograph.
         """
         return pulumi.get(self, "admission_webhook_secret")
 
     @admission_webhook_secret.setter
-    def admission_webhook_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def admission_webhook_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "admission_webhook_secret", value)
 
     @_builtins.property
     @pulumi.getter(name="admissionWebhookUrl")
-    def admission_webhook_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def admission_webhook_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The admission webhook URL for the monograph.
         """
         return pulumi.get(self, "admission_webhook_url")
 
     @admission_webhook_url.setter
-    def admission_webhook_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def admission_webhook_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "admission_webhook_url", value)
 
     @_builtins.property
     @pulumi.getter(name="graphUrl")
-    def graph_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def graph_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The GraphQL endpoint URL of the monograph.
         """
         return pulumi.get(self, "graph_url")
 
     @graph_url.setter
-    def graph_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def graph_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "graph_url", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the monograph.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def namespace(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def namespace(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The namespace in which the monograph is located.
         """
         return pulumi.get(self, "namespace")
 
     @namespace.setter
-    def namespace(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def namespace(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "namespace", value)
 
     @_builtins.property
     @pulumi.getter
-    def readme(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def readme(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The readme for the subgraph.
         """
         return pulumi.get(self, "readme")
 
     @readme.setter
-    def readme(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def readme(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "readme", value)
 
     @_builtins.property
     @pulumi.getter(name="routingUrl")
-    def routing_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def routing_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The routing URL for the monograph.
         """
         return pulumi.get(self, "routing_url")
 
     @routing_url.setter
-    def routing_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def routing_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "routing_url", value)
 
     @_builtins.property
     @pulumi.getter
-    def schema(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def schema(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The schema for the subgraph.
         """
         return pulumi.get(self, "schema")
 
     @schema.setter
-    def schema(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def schema(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "schema", value)
 
     @_builtins.property
     @pulumi.getter(name="subscriptionProtocol")
-    def subscription_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subscription_protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The subscription protocol for the subgraph.
         """
         return pulumi.get(self, "subscription_protocol")
 
     @subscription_protocol.setter
-    def subscription_protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subscription_protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subscription_protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="subscriptionUrl")
-    def subscription_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subscription_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The subscription URL for the subgraph.
         """
         return pulumi.get(self, "subscription_url")
 
     @subscription_url.setter
-    def subscription_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subscription_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subscription_url", value)
 
     @_builtins.property
     @pulumi.getter(name="websocketSubprotocol")
-    def websocket_subprotocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def websocket_subprotocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The websocket subprotocol for the subgraph.
         """
         return pulumi.get(self, "websocket_subprotocol")
 
     @websocket_subprotocol.setter
-    def websocket_subprotocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def websocket_subprotocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "websocket_subprotocol", value)
 
 
@@ -390,17 +390,17 @@ class Monograph(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 admission_webhook_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 admission_webhook_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 graph_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 namespace: Optional[pulumi.Input[_builtins.str]] = None,
-                 readme: Optional[pulumi.Input[_builtins.str]] = None,
-                 routing_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 schema: Optional[pulumi.Input[_builtins.str]] = None,
-                 subscription_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 subscription_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 websocket_subprotocol: Optional[pulumi.Input[_builtins.str]] = None,
+                 admission_webhook_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 admission_webhook_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 graph_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 namespace: pulumi.Input[Optional[_builtins.str]] = None,
+                 readme: pulumi.Input[Optional[_builtins.str]] = None,
+                 routing_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 schema: pulumi.Input[Optional[_builtins.str]] = None,
+                 subscription_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 subscription_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 websocket_subprotocol: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         Create a Monograph resource with the given unique name, props, and options.
@@ -443,17 +443,17 @@ class Monograph(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 admission_webhook_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 admission_webhook_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 graph_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 namespace: Optional[pulumi.Input[_builtins.str]] = None,
-                 readme: Optional[pulumi.Input[_builtins.str]] = None,
-                 routing_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 schema: Optional[pulumi.Input[_builtins.str]] = None,
-                 subscription_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 subscription_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 websocket_subprotocol: Optional[pulumi.Input[_builtins.str]] = None,
+                 admission_webhook_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 admission_webhook_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 graph_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 namespace: pulumi.Input[Optional[_builtins.str]] = None,
+                 readme: pulumi.Input[Optional[_builtins.str]] = None,
+                 routing_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 schema: pulumi.Input[Optional[_builtins.str]] = None,
+                 subscription_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 subscription_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 websocket_subprotocol: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -488,17 +488,17 @@ class Monograph(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            admission_webhook_secret: Optional[pulumi.Input[_builtins.str]] = None,
-            admission_webhook_url: Optional[pulumi.Input[_builtins.str]] = None,
-            graph_url: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            namespace: Optional[pulumi.Input[_builtins.str]] = None,
-            readme: Optional[pulumi.Input[_builtins.str]] = None,
-            routing_url: Optional[pulumi.Input[_builtins.str]] = None,
-            schema: Optional[pulumi.Input[_builtins.str]] = None,
-            subscription_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-            subscription_url: Optional[pulumi.Input[_builtins.str]] = None,
-            websocket_subprotocol: Optional[pulumi.Input[_builtins.str]] = None) -> 'Monograph':
+            admission_webhook_secret: pulumi.Input[Optional[_builtins.str]] = None,
+            admission_webhook_url: pulumi.Input[Optional[_builtins.str]] = None,
+            graph_url: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            namespace: pulumi.Input[Optional[_builtins.str]] = None,
+            readme: pulumi.Input[Optional[_builtins.str]] = None,
+            routing_url: pulumi.Input[Optional[_builtins.str]] = None,
+            schema: pulumi.Input[Optional[_builtins.str]] = None,
+            subscription_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+            subscription_url: pulumi.Input[Optional[_builtins.str]] = None,
+            websocket_subprotocol: pulumi.Input[Optional[_builtins.str]] = None) -> 'Monograph':
         """
         Get an existing Monograph resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

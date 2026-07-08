@@ -108,31 +108,31 @@ export interface FederatedGraphState {
     /**
      * The secret token used to authenticate the admission webhook requests.
      */
-    admissionWebhookSecret?: pulumi.Input<string>;
+    admissionWebhookSecret?: pulumi.Input<string | undefined>;
     /**
      * The URL for the admission webhook that will be triggered during graph operations.
      */
-    admissionWebhookUrl?: pulumi.Input<string>;
+    admissionWebhookUrl?: pulumi.Input<string | undefined>;
     /**
      * A list of label matchers used to select the services that will form the federated graph.
      */
-    labelMatchers?: pulumi.Input<pulumi.Input<string>[]>;
+    labelMatchers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name of the federated graph. This is used to identify the graph and must be unique within the namespace.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The namespace in which the federated graph is located. Defaults to 'default' if not provided.
      */
-    namespace?: pulumi.Input<string>;
+    namespace?: pulumi.Input<string | undefined>;
     /**
      * Readme content for the federated graph.
      */
-    readme?: pulumi.Input<string>;
+    readme?: pulumi.Input<string | undefined>;
     /**
      * The URL of the service that routes requests to the federated graph.
      */
-    routingUrl?: pulumi.Input<string>;
+    routingUrl?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -142,27 +142,27 @@ export interface FederatedGraphArgs {
     /**
      * The secret token used to authenticate the admission webhook requests.
      */
-    admissionWebhookSecret?: pulumi.Input<string>;
+    admissionWebhookSecret?: pulumi.Input<string | undefined>;
     /**
      * The URL for the admission webhook that will be triggered during graph operations.
      */
-    admissionWebhookUrl?: pulumi.Input<string>;
+    admissionWebhookUrl?: pulumi.Input<string | undefined>;
     /**
      * A list of label matchers used to select the services that will form the federated graph.
      */
-    labelMatchers?: pulumi.Input<pulumi.Input<string>[]>;
+    labelMatchers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name of the federated graph. This is used to identify the graph and must be unique within the namespace.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The namespace in which the federated graph is located. Defaults to 'default' if not provided.
      */
-    namespace?: pulumi.Input<string>;
+    namespace?: pulumi.Input<string | undefined>;
     /**
      * Readme content for the federated graph.
      */
-    readme?: pulumi.Input<string>;
+    readme?: pulumi.Input<string | undefined>;
     /**
      * The URL of the service that routes requests to the federated graph.
      */

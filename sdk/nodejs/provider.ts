@@ -69,11 +69,11 @@ export interface ProviderArgs {
     /**
      * The Api Key to be used: Leave blank to use the COSMO_API_KEY environment variable
      */
-    apiKey?: pulumi.Input<string>;
+    apiKey?: pulumi.Input<string | undefined>;
     /**
      * The Api Url to be used: Leave blank to use: https://cosmo-cp.wundergraph.com or use the COSMO_API_URL environment variable
      */
-    apiUrl?: pulumi.Input<string>;
+    apiUrl?: pulumi.Input<string | undefined>;
 }
 
 export namespace Provider {

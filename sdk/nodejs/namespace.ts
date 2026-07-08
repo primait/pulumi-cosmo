@@ -67,7 +67,7 @@ export interface NamespaceState {
     /**
      * The name of the namespace.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -77,5 +77,5 @@ export interface NamespaceArgs {
     /**
      * The name of the namespace.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

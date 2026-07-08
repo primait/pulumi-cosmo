@@ -140,8 +140,8 @@ def get_feature_flag(name: Optional[_builtins.str] = None,
         name=pulumi.get(__ret__, 'name'),
         namespace=pulumi.get(__ret__, 'namespace'),
         updated_at=pulumi.get(__ret__, 'updated_at'))
-def get_feature_flag_output(name: Optional[pulumi.Input[_builtins.str]] = None,
-                            namespace: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_feature_flag_output(name: pulumi.Input[Optional[_builtins.str]] = None,
+                            namespace: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetFeatureFlagResult]:
     """
     Use this data source to access information about an existing resource.

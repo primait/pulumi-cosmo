@@ -90,19 +90,19 @@ export interface RouterTokenState {
     /**
      * The name of the graph to create the token for.
      */
-    graphName?: pulumi.Input<string>;
+    graphName?: pulumi.Input<string | undefined>;
     /**
      * The name of the router token.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The namespace to create the token in.
      */
-    namespace?: pulumi.Input<string>;
+    namespace?: pulumi.Input<string | undefined>;
     /**
      * The token to be used for the router.
      */
-    token?: pulumi.Input<string>;
+    token?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -116,9 +116,9 @@ export interface RouterTokenArgs {
     /**
      * The name of the router token.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The namespace to create the token in.
      */
-    namespace?: pulumi.Input<string>;
+    namespace?: pulumi.Input<string | undefined>;
 }

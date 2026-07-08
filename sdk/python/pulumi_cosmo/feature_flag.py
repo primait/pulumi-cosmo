@@ -20,17 +20,17 @@ __all__ = ['FeatureFlagArgs', 'FeatureFlag']
 class FeatureFlagArgs:
     def __init__(__self__, *,
                  feature_subgraphs: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 is_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 labels: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 namespace: Optional[pulumi.Input[_builtins.str]] = None):
+                 is_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 labels: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 namespace: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a FeatureFlag resource.
 
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_subgraphs: The list of feature subgraphs associated with the feature flag. 
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_subgraphs: The list of feature subgraphs associated with the feature flag.
                At least one feature subgraph must be provided.
         :param pulumi.Input[_builtins.bool] is_enabled: Indicates whether the feature flag is enabled.
-        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] labels: The labels associated with the feature flag. These labels indicate which 
+        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] labels: The labels associated with the feature flag. These labels indicate which
                federated graphs can be associated with the feature flag to enabled calls against the corresponding feature subgraph.
         :param pulumi.Input[_builtins.str] name: The name of the feature flag.
         :param pulumi.Input[_builtins.str] namespace: The namespace of the feature flag.
@@ -49,7 +49,7 @@ class FeatureFlagArgs:
     @pulumi.getter(name="featureSubgraphs")
     def feature_subgraphs(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The list of feature subgraphs associated with the feature flag. 
+        The list of feature subgraphs associated with the feature flag.
         At least one feature subgraph must be provided.
         """
         return pulumi.get(self, "feature_subgraphs")
@@ -60,74 +60,74 @@ class FeatureFlagArgs:
 
     @_builtins.property
     @pulumi.getter(name="isEnabled")
-    def is_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Indicates whether the feature flag is enabled.
         """
         return pulumi.get(self, "is_enabled")
 
     @is_enabled.setter
-    def is_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def labels(self) -> Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]:
+    def labels(self) -> pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]:
         """
-        The labels associated with the feature flag. These labels indicate which 
+        The labels associated with the feature flag. These labels indicate which
         federated graphs can be associated with the feature flag to enabled calls against the corresponding feature subgraph.
         """
         return pulumi.get(self, "labels")
 
     @labels.setter
-    def labels(self, value: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]):
+    def labels(self, value: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "labels", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature flag.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def namespace(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def namespace(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The namespace of the feature flag.
         """
         return pulumi.get(self, "namespace")
 
     @namespace.setter
-    def namespace(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def namespace(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "namespace", value)
 
 
 @pulumi.input_type
 class _FeatureFlagState:
     def __init__(__self__, *,
-                 created_at: Optional[pulumi.Input[_builtins.str]] = None,
-                 created_by: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_subgraphs: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 is_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 labels: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 namespace: Optional[pulumi.Input[_builtins.str]] = None,
-                 updated_at: Optional[pulumi.Input[_builtins.str]] = None):
+                 created_at: pulumi.Input[Optional[_builtins.str]] = None,
+                 created_by: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_subgraphs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 is_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 labels: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 namespace: pulumi.Input[Optional[_builtins.str]] = None,
+                 updated_at: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering FeatureFlag resources.
 
         :param pulumi.Input[_builtins.str] created_at: The timestamp when the feature flag was created.
         :param pulumi.Input[_builtins.str] created_by: The user who created the feature flag.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_subgraphs: The list of feature subgraphs associated with the feature flag. 
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_subgraphs: The list of feature subgraphs associated with the feature flag.
                At least one feature subgraph must be provided.
         :param pulumi.Input[_builtins.bool] is_enabled: Indicates whether the feature flag is enabled.
-        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] labels: The labels associated with the feature flag. These labels indicate which 
+        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] labels: The labels associated with the feature flag. These labels indicate which
                federated graphs can be associated with the feature flag to enabled calls against the corresponding feature subgraph.
         :param pulumi.Input[_builtins.str] name: The name of the feature flag.
         :param pulumi.Input[_builtins.str] namespace: The namespace of the feature flag.
@@ -152,100 +152,100 @@ class _FeatureFlagState:
 
     @_builtins.property
     @pulumi.getter(name="createdAt")
-    def created_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def created_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The timestamp when the feature flag was created.
         """
         return pulumi.get(self, "created_at")
 
     @created_at.setter
-    def created_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def created_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "created_at", value)
 
     @_builtins.property
     @pulumi.getter(name="createdBy")
-    def created_by(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def created_by(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The user who created the feature flag.
         """
         return pulumi.get(self, "created_by")
 
     @created_by.setter
-    def created_by(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def created_by(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "created_by", value)
 
     @_builtins.property
     @pulumi.getter(name="featureSubgraphs")
-    def feature_subgraphs(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def feature_subgraphs(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The list of feature subgraphs associated with the feature flag. 
+        The list of feature subgraphs associated with the feature flag.
         At least one feature subgraph must be provided.
         """
         return pulumi.get(self, "feature_subgraphs")
 
     @feature_subgraphs.setter
-    def feature_subgraphs(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def feature_subgraphs(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "feature_subgraphs", value)
 
     @_builtins.property
     @pulumi.getter(name="isEnabled")
-    def is_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Indicates whether the feature flag is enabled.
         """
         return pulumi.get(self, "is_enabled")
 
     @is_enabled.setter
-    def is_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def labels(self) -> Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]:
+    def labels(self) -> pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]:
         """
-        The labels associated with the feature flag. These labels indicate which 
+        The labels associated with the feature flag. These labels indicate which
         federated graphs can be associated with the feature flag to enabled calls against the corresponding feature subgraph.
         """
         return pulumi.get(self, "labels")
 
     @labels.setter
-    def labels(self, value: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]):
+    def labels(self, value: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "labels", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature flag.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def namespace(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def namespace(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The namespace of the feature flag.
         """
         return pulumi.get(self, "namespace")
 
     @namespace.setter
-    def namespace(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def namespace(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "namespace", value)
 
     @_builtins.property
     @pulumi.getter(name="updatedAt")
-    def updated_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def updated_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The timestamp when the feature flag was last updated.
         """
         return pulumi.get(self, "updated_at")
 
     @updated_at.setter
-    def updated_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def updated_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "updated_at", value)
 
 
@@ -255,21 +255,21 @@ class FeatureFlag(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 feature_subgraphs: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 is_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 labels: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 namespace: Optional[pulumi.Input[_builtins.str]] = None,
+                 feature_subgraphs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 is_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 labels: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 namespace: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         Create a FeatureFlag resource with the given unique name, props, and options.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_subgraphs: The list of feature subgraphs associated with the feature flag. 
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_subgraphs: The list of feature subgraphs associated with the feature flag.
                At least one feature subgraph must be provided.
         :param pulumi.Input[_builtins.bool] is_enabled: Indicates whether the feature flag is enabled.
-        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] labels: The labels associated with the feature flag. These labels indicate which 
+        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] labels: The labels associated with the feature flag. These labels indicate which
                federated graphs can be associated with the feature flag to enabled calls against the corresponding feature subgraph.
         :param pulumi.Input[_builtins.str] name: The name of the feature flag.
         :param pulumi.Input[_builtins.str] namespace: The namespace of the feature flag.
@@ -298,11 +298,11 @@ class FeatureFlag(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 feature_subgraphs: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 is_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 labels: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 namespace: Optional[pulumi.Input[_builtins.str]] = None,
+                 feature_subgraphs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 is_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 labels: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 namespace: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -332,14 +332,14 @@ class FeatureFlag(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            created_at: Optional[pulumi.Input[_builtins.str]] = None,
-            created_by: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_subgraphs: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            is_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            labels: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            namespace: Optional[pulumi.Input[_builtins.str]] = None,
-            updated_at: Optional[pulumi.Input[_builtins.str]] = None) -> 'FeatureFlag':
+            created_at: pulumi.Input[Optional[_builtins.str]] = None,
+            created_by: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_subgraphs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            is_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            labels: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            namespace: pulumi.Input[Optional[_builtins.str]] = None,
+            updated_at: pulumi.Input[Optional[_builtins.str]] = None) -> 'FeatureFlag':
         """
         Get an existing FeatureFlag resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -349,10 +349,10 @@ class FeatureFlag(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] created_at: The timestamp when the feature flag was created.
         :param pulumi.Input[_builtins.str] created_by: The user who created the feature flag.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_subgraphs: The list of feature subgraphs associated with the feature flag. 
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_subgraphs: The list of feature subgraphs associated with the feature flag.
                At least one feature subgraph must be provided.
         :param pulumi.Input[_builtins.bool] is_enabled: Indicates whether the feature flag is enabled.
-        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] labels: The labels associated with the feature flag. These labels indicate which 
+        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] labels: The labels associated with the feature flag. These labels indicate which
                federated graphs can be associated with the feature flag to enabled calls against the corresponding feature subgraph.
         :param pulumi.Input[_builtins.str] name: The name of the feature flag.
         :param pulumi.Input[_builtins.str] namespace: The namespace of the feature flag.
@@ -392,7 +392,7 @@ class FeatureFlag(pulumi.CustomResource):
     @pulumi.getter(name="featureSubgraphs")
     def feature_subgraphs(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The list of feature subgraphs associated with the feature flag. 
+        The list of feature subgraphs associated with the feature flag.
         At least one feature subgraph must be provided.
         """
         return pulumi.get(self, "feature_subgraphs")
@@ -409,7 +409,7 @@ class FeatureFlag(pulumi.CustomResource):
     @pulumi.getter
     def labels(self) -> pulumi.Output[Optional[Mapping[str, _builtins.str]]]:
         """
-        The labels associated with the feature flag. These labels indicate which 
+        The labels associated with the feature flag. These labels indicate which
         federated graphs can be associated with the feature flag to enabled calls against the corresponding feature subgraph.
         """
         return pulumi.get(self, "labels")

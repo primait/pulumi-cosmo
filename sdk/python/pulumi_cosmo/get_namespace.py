@@ -68,7 +68,7 @@ def get_namespace(name: Optional[_builtins.str] = None,
     return AwaitableGetNamespaceResult(
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'))
-def get_namespace_output(name: Optional[pulumi.Input[_builtins.str]] = None,
+def get_namespace_output(name: pulumi.Input[Optional[_builtins.str]] = None,
                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetNamespaceResult]:
     """
     Use this data source to access information about an existing resource.

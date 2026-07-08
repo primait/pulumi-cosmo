@@ -41,7 +41,7 @@ export class FeatureFlag extends pulumi.CustomResource {
      */
     declare public /*out*/ readonly createdBy: pulumi.Output<string>;
     /**
-     * The list of feature subgraphs associated with the feature flag. 
+     * The list of feature subgraphs associated with the feature flag.
      * At least one feature subgraph must be provided.
      */
     declare public readonly featureSubgraphs: pulumi.Output<string[]>;
@@ -50,7 +50,7 @@ export class FeatureFlag extends pulumi.CustomResource {
      */
     declare public readonly isEnabled: pulumi.Output<boolean | undefined>;
     /**
-     * The labels associated with the feature flag. These labels indicate which 
+     * The labels associated with the feature flag. These labels indicate which
      * federated graphs can be associated with the feature flag to enabled calls against the corresponding feature subgraph.
      */
     declare public readonly labels: pulumi.Output<{[key: string]: string} | undefined>;
@@ -114,37 +114,37 @@ export interface FeatureFlagState {
     /**
      * The timestamp when the feature flag was created.
      */
-    createdAt?: pulumi.Input<string>;
+    createdAt?: pulumi.Input<string | undefined>;
     /**
      * The user who created the feature flag.
      */
-    createdBy?: pulumi.Input<string>;
+    createdBy?: pulumi.Input<string | undefined>;
     /**
-     * The list of feature subgraphs associated with the feature flag. 
+     * The list of feature subgraphs associated with the feature flag.
      * At least one feature subgraph must be provided.
      */
-    featureSubgraphs?: pulumi.Input<pulumi.Input<string>[]>;
+    featureSubgraphs?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Indicates whether the feature flag is enabled.
      */
-    isEnabled?: pulumi.Input<boolean>;
+    isEnabled?: pulumi.Input<boolean | undefined>;
     /**
-     * The labels associated with the feature flag. These labels indicate which 
+     * The labels associated with the feature flag. These labels indicate which
      * federated graphs can be associated with the feature flag to enabled calls against the corresponding feature subgraph.
      */
-    labels?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
+    labels?: pulumi.Input<{[key: string]: pulumi.Input<string>} | undefined>;
     /**
      * The name of the feature flag.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The namespace of the feature flag.
      */
-    namespace?: pulumi.Input<string>;
+    namespace?: pulumi.Input<string | undefined>;
     /**
      * The timestamp when the feature flag was last updated.
      */
-    updatedAt?: pulumi.Input<string>;
+    updatedAt?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -152,25 +152,25 @@ export interface FeatureFlagState {
  */
 export interface FeatureFlagArgs {
     /**
-     * The list of feature subgraphs associated with the feature flag. 
+     * The list of feature subgraphs associated with the feature flag.
      * At least one feature subgraph must be provided.
      */
     featureSubgraphs: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Indicates whether the feature flag is enabled.
      */
-    isEnabled?: pulumi.Input<boolean>;
+    isEnabled?: pulumi.Input<boolean | undefined>;
     /**
-     * The labels associated with the feature flag. These labels indicate which 
+     * The labels associated with the feature flag. These labels indicate which
      * federated graphs can be associated with the feature flag to enabled calls against the corresponding feature subgraph.
      */
-    labels?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
+    labels?: pulumi.Input<{[key: string]: pulumi.Input<string>} | undefined>;
     /**
      * The name of the feature flag.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The namespace of the feature flag.
      */
-    namespace?: pulumi.Input<string>;
+    namespace?: pulumi.Input<string | undefined>;
 }

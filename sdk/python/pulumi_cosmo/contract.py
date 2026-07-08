@@ -22,13 +22,13 @@ class ContractArgs:
                  namespace: pulumi.Input[_builtins.str],
                  routing_url: pulumi.Input[_builtins.str],
                  source: pulumi.Input[_builtins.str],
-                 admission_webhook_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 admission_webhook_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 exclude_tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 include_tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 readme: Optional[pulumi.Input[_builtins.str]] = None,
-                 supports_federation: Optional[pulumi.Input[_builtins.bool]] = None):
+                 admission_webhook_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 admission_webhook_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 exclude_tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 include_tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 readme: pulumi.Input[Optional[_builtins.str]] = None,
+                 supports_federation: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a Contract resource.
         """
@@ -79,81 +79,81 @@ class ContractArgs:
 
     @_builtins.property
     @pulumi.getter(name="admissionWebhookSecret")
-    def admission_webhook_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def admission_webhook_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "admission_webhook_secret")
 
     @admission_webhook_secret.setter
-    def admission_webhook_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def admission_webhook_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "admission_webhook_secret", value)
 
     @_builtins.property
     @pulumi.getter(name="admissionWebhookUrl")
-    def admission_webhook_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def admission_webhook_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "admission_webhook_url")
 
     @admission_webhook_url.setter
-    def admission_webhook_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def admission_webhook_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "admission_webhook_url", value)
 
     @_builtins.property
     @pulumi.getter(name="excludeTags")
-    def exclude_tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def exclude_tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         return pulumi.get(self, "exclude_tags")
 
     @exclude_tags.setter
-    def exclude_tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def exclude_tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "exclude_tags", value)
 
     @_builtins.property
     @pulumi.getter(name="includeTags")
-    def include_tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def include_tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         return pulumi.get(self, "include_tags")
 
     @include_tags.setter
-    def include_tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def include_tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "include_tags", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def readme(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def readme(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "readme")
 
     @readme.setter
-    def readme(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def readme(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "readme", value)
 
     @_builtins.property
     @pulumi.getter(name="supportsFederation")
-    def supports_federation(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def supports_federation(self) -> pulumi.Input[Optional[_builtins.bool]]:
         return pulumi.get(self, "supports_federation")
 
     @supports_federation.setter
-    def supports_federation(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def supports_federation(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "supports_federation", value)
 
 
 @pulumi.input_type
 class _ContractState:
     def __init__(__self__, *,
-                 admission_webhook_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 admission_webhook_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 exclude_tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 include_tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 namespace: Optional[pulumi.Input[_builtins.str]] = None,
-                 readme: Optional[pulumi.Input[_builtins.str]] = None,
-                 routing_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 source: Optional[pulumi.Input[_builtins.str]] = None,
-                 supports_federation: Optional[pulumi.Input[_builtins.bool]] = None):
+                 admission_webhook_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 admission_webhook_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 exclude_tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 include_tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 namespace: pulumi.Input[Optional[_builtins.str]] = None,
+                 readme: pulumi.Input[Optional[_builtins.str]] = None,
+                 routing_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 source: pulumi.Input[Optional[_builtins.str]] = None,
+                 supports_federation: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering Contract resources.
         """
@@ -180,92 +180,92 @@ class _ContractState:
 
     @_builtins.property
     @pulumi.getter(name="admissionWebhookSecret")
-    def admission_webhook_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def admission_webhook_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "admission_webhook_secret")
 
     @admission_webhook_secret.setter
-    def admission_webhook_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def admission_webhook_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "admission_webhook_secret", value)
 
     @_builtins.property
     @pulumi.getter(name="admissionWebhookUrl")
-    def admission_webhook_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def admission_webhook_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "admission_webhook_url")
 
     @admission_webhook_url.setter
-    def admission_webhook_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def admission_webhook_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "admission_webhook_url", value)
 
     @_builtins.property
     @pulumi.getter(name="excludeTags")
-    def exclude_tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def exclude_tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         return pulumi.get(self, "exclude_tags")
 
     @exclude_tags.setter
-    def exclude_tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def exclude_tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "exclude_tags", value)
 
     @_builtins.property
     @pulumi.getter(name="includeTags")
-    def include_tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def include_tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         return pulumi.get(self, "include_tags")
 
     @include_tags.setter
-    def include_tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def include_tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "include_tags", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def namespace(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def namespace(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "namespace")
 
     @namespace.setter
-    def namespace(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def namespace(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "namespace", value)
 
     @_builtins.property
     @pulumi.getter
-    def readme(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def readme(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "readme")
 
     @readme.setter
-    def readme(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def readme(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "readme", value)
 
     @_builtins.property
     @pulumi.getter(name="routingUrl")
-    def routing_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def routing_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "routing_url")
 
     @routing_url.setter
-    def routing_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def routing_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "routing_url", value)
 
     @_builtins.property
     @pulumi.getter
-    def source(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def source(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "source")
 
     @source.setter
-    def source(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def source(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "source", value)
 
     @_builtins.property
     @pulumi.getter(name="supportsFederation")
-    def supports_federation(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def supports_federation(self) -> pulumi.Input[Optional[_builtins.bool]]:
         return pulumi.get(self, "supports_federation")
 
     @supports_federation.setter
-    def supports_federation(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def supports_federation(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "supports_federation", value)
 
 
@@ -275,16 +275,16 @@ class Contract(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 admission_webhook_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 admission_webhook_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 exclude_tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 include_tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 namespace: Optional[pulumi.Input[_builtins.str]] = None,
-                 readme: Optional[pulumi.Input[_builtins.str]] = None,
-                 routing_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 source: Optional[pulumi.Input[_builtins.str]] = None,
-                 supports_federation: Optional[pulumi.Input[_builtins.bool]] = None,
+                 admission_webhook_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 admission_webhook_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 exclude_tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 include_tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 namespace: pulumi.Input[Optional[_builtins.str]] = None,
+                 readme: pulumi.Input[Optional[_builtins.str]] = None,
+                 routing_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 source: pulumi.Input[Optional[_builtins.str]] = None,
+                 supports_federation: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         Create a Contract resource with the given unique name, props, and options.
@@ -316,16 +316,16 @@ class Contract(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 admission_webhook_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 admission_webhook_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 exclude_tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 include_tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 namespace: Optional[pulumi.Input[_builtins.str]] = None,
-                 readme: Optional[pulumi.Input[_builtins.str]] = None,
-                 routing_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 source: Optional[pulumi.Input[_builtins.str]] = None,
-                 supports_federation: Optional[pulumi.Input[_builtins.bool]] = None,
+                 admission_webhook_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 admission_webhook_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 exclude_tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 include_tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 namespace: pulumi.Input[Optional[_builtins.str]] = None,
+                 readme: pulumi.Input[Optional[_builtins.str]] = None,
+                 routing_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 source: pulumi.Input[Optional[_builtins.str]] = None,
+                 supports_federation: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -361,16 +361,16 @@ class Contract(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            admission_webhook_secret: Optional[pulumi.Input[_builtins.str]] = None,
-            admission_webhook_url: Optional[pulumi.Input[_builtins.str]] = None,
-            exclude_tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            include_tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            namespace: Optional[pulumi.Input[_builtins.str]] = None,
-            readme: Optional[pulumi.Input[_builtins.str]] = None,
-            routing_url: Optional[pulumi.Input[_builtins.str]] = None,
-            source: Optional[pulumi.Input[_builtins.str]] = None,
-            supports_federation: Optional[pulumi.Input[_builtins.bool]] = None) -> 'Contract':
+            admission_webhook_secret: pulumi.Input[Optional[_builtins.str]] = None,
+            admission_webhook_url: pulumi.Input[Optional[_builtins.str]] = None,
+            exclude_tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            include_tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            namespace: pulumi.Input[Optional[_builtins.str]] = None,
+            readme: pulumi.Input[Optional[_builtins.str]] = None,
+            routing_url: pulumi.Input[Optional[_builtins.str]] = None,
+            source: pulumi.Input[Optional[_builtins.str]] = None,
+            supports_federation: pulumi.Input[Optional[_builtins.bool]] = None) -> 'Contract':
         """
         Get an existing Contract resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
