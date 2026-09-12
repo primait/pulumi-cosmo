@@ -33,6 +33,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &Monograph{}
 	case "cosmo:index/namespace:Namespace":
 		r = &Namespace{}
+	case "cosmo:index/persistedOperations:PersistedOperations":
+		r = &PersistedOperations{}
 	case "cosmo:index/routerToken:RouterToken":
 		r = &RouterToken{}
 	case "cosmo:index/subgraph:Subgraph":
@@ -96,6 +98,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"cosmo",
 		"index/namespace",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"cosmo",
+		"index/persistedOperations",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
