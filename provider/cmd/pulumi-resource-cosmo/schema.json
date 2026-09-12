@@ -58,6 +58,95 @@
             }
         }
     },
+    "types": {
+        "cosmo:index/getClientsClient:getClientsClient": {
+            "properties": {
+                "createdAt": {
+                    "type": "string",
+                    "description": "The time the client was created.\n"
+                },
+                "createdBy": {
+                    "type": "string",
+                    "description": "The user that created the client.\n"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "The unique identifier of the client.\n"
+                },
+                "lastUpdatedAt": {
+                    "type": "string",
+                    "description": "The time the client was last updated.\n"
+                },
+                "lastUpdatedBy": {
+                    "type": "string",
+                    "description": "The user that last updated the client.\n"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the client.\n"
+                },
+                "persistedOperationsCount": {
+                    "type": "integer",
+                    "description": "The number of persisted operations registered for the client.\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "createdAt",
+                "createdBy",
+                "id",
+                "lastUpdatedAt",
+                "lastUpdatedBy",
+                "name",
+                "persistedOperationsCount"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        },
+        "cosmo:index/getPersistedOperationsOperation:getPersistedOperationsOperation": {
+            "properties": {
+                "contents": {
+                    "type": "string",
+                    "description": "The GraphQL operation contents.\n"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "description": "The time the operation was created.\n"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "The unique identifier of the operation (the SHA-256 hash of its contents).\n"
+                },
+                "lastUpdatedAt": {
+                    "type": "string",
+                    "description": "The time the operation was last updated.\n"
+                },
+                "operationNames": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "The names of the operations contained in the document.\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "contents",
+                "createdAt",
+                "id",
+                "lastUpdatedAt",
+                "operationNames"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        }
+    },
     "provider": {
         "description": "The provider type for the cosmo package. By default, resources use package-wide configuration\nsettings, however an explicit `Provider` instance may be created and passed during resource\nconstruction to achieve fine-grained programmatic control over provider settings. See the\n[documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.\n",
         "properties": {
@@ -772,6 +861,86 @@
                 "type": "object"
             }
         },
+        "cosmo:index/persistedOperations:PersistedOperations": {
+            "properties": {
+                "clientName": {
+                    "type": "string",
+                    "description": "The name of the client the operations belong to (e.g. \u003cspan pulumi-lang-nodejs=\"`web`\" pulumi-lang-dotnet=\"`Web`\" pulumi-lang-go=\"`web`\" pulumi-lang-python=\"`web`\" pulumi-lang-yaml=\"`web`\" pulumi-lang-java=\"`web`\"\u003e`web`\u003c/span\u003e, \u003cspan pulumi-lang-nodejs=\"`ios`\" pulumi-lang-dotnet=\"`Ios`\" pulumi-lang-go=\"`ios`\" pulumi-lang-python=\"`ios`\" pulumi-lang-yaml=\"`ios`\" pulumi-lang-java=\"`ios`\"\u003e`ios`\u003c/span\u003e). The client is created on first publish."
+                },
+                "federatedGraphName": {
+                    "type": "string",
+                    "description": "The name of the federated graph to register the operations on."
+                },
+                "namespace": {
+                    "type": "string",
+                    "description": "The namespace of the federated graph."
+                },
+                "operations": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    },
+                    "description": "The persisted operations as a map of an arbitrary label to the contents of a plain GraphQL document. JSON manifests are not supported yet."
+                }
+            },
+            "required": [
+                "clientName",
+                "federatedGraphName",
+                "namespace",
+                "operations"
+            ],
+            "inputProperties": {
+                "clientName": {
+                    "type": "string",
+                    "description": "The name of the client the operations belong to (e.g. \u003cspan pulumi-lang-nodejs=\"`web`\" pulumi-lang-dotnet=\"`Web`\" pulumi-lang-go=\"`web`\" pulumi-lang-python=\"`web`\" pulumi-lang-yaml=\"`web`\" pulumi-lang-java=\"`web`\"\u003e`web`\u003c/span\u003e, \u003cspan pulumi-lang-nodejs=\"`ios`\" pulumi-lang-dotnet=\"`Ios`\" pulumi-lang-go=\"`ios`\" pulumi-lang-python=\"`ios`\" pulumi-lang-yaml=\"`ios`\" pulumi-lang-java=\"`ios`\"\u003e`ios`\u003c/span\u003e). The client is created on first publish."
+                },
+                "federatedGraphName": {
+                    "type": "string",
+                    "description": "The name of the federated graph to register the operations on."
+                },
+                "namespace": {
+                    "type": "string",
+                    "description": "The namespace of the federated graph."
+                },
+                "operations": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    },
+                    "description": "The persisted operations as a map of an arbitrary label to the contents of a plain GraphQL document. JSON manifests are not supported yet."
+                }
+            },
+            "requiredInputs": [
+                "clientName",
+                "federatedGraphName",
+                "operations"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering PersistedOperations resources.\n",
+                "properties": {
+                    "clientName": {
+                        "type": "string",
+                        "description": "The name of the client the operations belong to (e.g. \u003cspan pulumi-lang-nodejs=\"`web`\" pulumi-lang-dotnet=\"`Web`\" pulumi-lang-go=\"`web`\" pulumi-lang-python=\"`web`\" pulumi-lang-yaml=\"`web`\" pulumi-lang-java=\"`web`\"\u003e`web`\u003c/span\u003e, \u003cspan pulumi-lang-nodejs=\"`ios`\" pulumi-lang-dotnet=\"`Ios`\" pulumi-lang-go=\"`ios`\" pulumi-lang-python=\"`ios`\" pulumi-lang-yaml=\"`ios`\" pulumi-lang-java=\"`ios`\"\u003e`ios`\u003c/span\u003e). The client is created on first publish."
+                    },
+                    "federatedGraphName": {
+                        "type": "string",
+                        "description": "The name of the federated graph to register the operations on."
+                    },
+                    "namespace": {
+                        "type": "string",
+                        "description": "The namespace of the federated graph."
+                    },
+                    "operations": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        },
+                        "description": "The persisted operations as a map of an arbitrary label to the contents of a plain GraphQL document. JSON manifests are not supported yet."
+                    }
+                },
+                "type": "object"
+            }
+        },
         "cosmo:index/routerToken:RouterToken": {
             "properties": {
                 "graphName": {
@@ -1003,6 +1172,51 @@
         }
     },
     "functions": {
+        "cosmo:index/getClients:getClients": {
+            "inputs": {
+                "description": "A collection of arguments for invoking getClients.\n",
+                "properties": {
+                    "federatedGraphName": {
+                        "type": "string"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "federatedGraphName"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getClients.\n",
+                "properties": {
+                    "clients": {
+                        "items": {
+                            "$ref": "#/types/cosmo:index/getClientsClient:getClientsClient"
+                        },
+                        "type": "array"
+                    },
+                    "federatedGraphName": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "The provider-assigned unique ID for this managed resource.",
+                        "type": "string"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "clients",
+                    "federatedGraphName",
+                    "namespace",
+                    "id"
+                ],
+                "type": "object"
+            }
+        },
         "cosmo:index/getContract:getContract": {
             "inputs": {
                 "description": "A collection of arguments for invoking getContract.\n",
@@ -1369,6 +1583,63 @@
                 "required": [
                     "id",
                     "name"
+                ],
+                "type": "object"
+            }
+        },
+        "cosmo:index/getPersistedOperations:getPersistedOperations": {
+            "inputs": {
+                "description": "A collection of arguments for invoking getPersistedOperations.\n",
+                "properties": {
+                    "clientName": {
+                        "type": "string"
+                    },
+                    "federatedGraphName": {
+                        "type": "string"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "clientName",
+                    "federatedGraphName"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getPersistedOperations.\n",
+                "properties": {
+                    "clientId": {
+                        "type": "string"
+                    },
+                    "clientName": {
+                        "type": "string"
+                    },
+                    "federatedGraphName": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "The provider-assigned unique ID for this managed resource.",
+                        "type": "string"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "operations": {
+                        "items": {
+                            "$ref": "#/types/cosmo:index/getPersistedOperationsOperation:getPersistedOperationsOperation"
+                        },
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "clientId",
+                    "clientName",
+                    "federatedGraphName",
+                    "namespace",
+                    "operations",
+                    "id"
                 ],
                 "type": "object"
             }

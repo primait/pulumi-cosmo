@@ -25,6 +25,11 @@ export type FederatedGraph = import("./federatedGraph").FederatedGraph;
 export const FederatedGraph: typeof import("./federatedGraph").FederatedGraph = null as any;
 utilities.lazyLoad(exports, ["FederatedGraph"], () => require("./federatedGraph"));
 
+export { GetClientsArgs, GetClientsResult, GetClientsOutputArgs } from "./getClients";
+export const getClients: typeof import("./getClients").getClients = null as any;
+export const getClientsOutput: typeof import("./getClients").getClientsOutput = null as any;
+utilities.lazyLoad(exports, ["getClients","getClientsOutput"], () => require("./getClients"));
+
 export { GetContractArgs, GetContractResult, GetContractOutputArgs } from "./getContract";
 export const getContract: typeof import("./getContract").getContract = null as any;
 export const getContractOutput: typeof import("./getContract").getContractOutput = null as any;
@@ -55,6 +60,11 @@ export const getNamespace: typeof import("./getNamespace").getNamespace = null a
 export const getNamespaceOutput: typeof import("./getNamespace").getNamespaceOutput = null as any;
 utilities.lazyLoad(exports, ["getNamespace","getNamespaceOutput"], () => require("./getNamespace"));
 
+export { GetPersistedOperationsArgs, GetPersistedOperationsResult, GetPersistedOperationsOutputArgs } from "./getPersistedOperations";
+export const getPersistedOperations: typeof import("./getPersistedOperations").getPersistedOperations = null as any;
+export const getPersistedOperationsOutput: typeof import("./getPersistedOperations").getPersistedOperationsOutput = null as any;
+utilities.lazyLoad(exports, ["getPersistedOperations","getPersistedOperationsOutput"], () => require("./getPersistedOperations"));
+
 export { GetSubgraphArgs, GetSubgraphResult, GetSubgraphOutputArgs } from "./getSubgraph";
 export const getSubgraph: typeof import("./getSubgraph").getSubgraph = null as any;
 export const getSubgraphOutput: typeof import("./getSubgraph").getSubgraphOutput = null as any;
@@ -69,6 +79,11 @@ export { NamespaceArgs, NamespaceState } from "./namespace";
 export type Namespace = import("./namespace").Namespace;
 export const Namespace: typeof import("./namespace").Namespace = null as any;
 utilities.lazyLoad(exports, ["Namespace"], () => require("./namespace"));
+
+export { PersistedOperationsArgs, PersistedOperationsState } from "./persistedOperations";
+export type PersistedOperations = import("./persistedOperations").PersistedOperations;
+export const PersistedOperations: typeof import("./persistedOperations").PersistedOperations = null as any;
+utilities.lazyLoad(exports, ["PersistedOperations"], () => require("./persistedOperations"));
 
 export * from "./provider";
 import { Provider } from "./provider";
@@ -86,9 +101,11 @@ utilities.lazyLoad(exports, ["Subgraph"], () => require("./subgraph"));
 
 // Export sub-modules:
 import * as config from "./config";
+import * as types from "./types";
 
 export {
     config,
+    types,
 };
 
 const _module = {
@@ -107,6 +124,8 @@ const _module = {
                 return new Monograph(name, <any>undefined, { urn })
             case "cosmo:index/namespace:Namespace":
                 return new Namespace(name, <any>undefined, { urn })
+            case "cosmo:index/persistedOperations:PersistedOperations":
+                return new PersistedOperations(name, <any>undefined, { urn })
             case "cosmo:index/routerToken:RouterToken":
                 return new RouterToken(name, <any>undefined, { urn })
             case "cosmo:index/subgraph:Subgraph":
@@ -122,6 +141,7 @@ pulumi.runtime.registerResourceModule("cosmo", "index/featureSubgraph", _module)
 pulumi.runtime.registerResourceModule("cosmo", "index/federatedGraph", _module)
 pulumi.runtime.registerResourceModule("cosmo", "index/monograph", _module)
 pulumi.runtime.registerResourceModule("cosmo", "index/namespace", _module)
+pulumi.runtime.registerResourceModule("cosmo", "index/persistedOperations", _module)
 pulumi.runtime.registerResourceModule("cosmo", "index/routerToken", _module)
 pulumi.runtime.registerResourceModule("cosmo", "index/subgraph", _module)
 pulumi.runtime.registerResourcePackage("cosmo", {

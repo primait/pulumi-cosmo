@@ -37,6 +37,9 @@
             "cosmo_namespace": {
                 "current": "cosmo:index/namespace:Namespace"
             },
+            "cosmo_persisted_operations": {
+                "current": "cosmo:index/persistedOperations:PersistedOperations"
+            },
             "cosmo_router_token": {
                 "current": "cosmo:index/routerToken:RouterToken"
             },
@@ -45,6 +48,14 @@
             }
         },
         "datasources": {
+            "cosmo_clients": {
+                "current": "cosmo:index/getClients:getClients",
+                "fields": {
+                    "clients": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "cosmo_contract": {
                 "current": "cosmo:index/getContract:getContract",
                 "fields": {
@@ -80,6 +91,21 @@
             },
             "cosmo_namespace": {
                 "current": "cosmo:index/getNamespace:getNamespace"
+            },
+            "cosmo_persisted_operations": {
+                "current": "cosmo:index/getPersistedOperations:getPersistedOperations",
+                "fields": {
+                    "operations": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "operation_names": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
             },
             "cosmo_subgraph": {
                 "current": "cosmo:index/getSubgraph:getSubgraph",
