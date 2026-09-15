@@ -10,18 +10,22 @@ from .contract import *
 from .feature_flag import *
 from .feature_subgraph import *
 from .federated_graph import *
+from .get_clients import *
 from .get_contract import *
 from .get_feature_flag import *
 from .get_feature_subgraph import *
 from .get_federated_graph import *
 from .get_monograph import *
 from .get_namespace import *
+from .get_persisted_operations import *
 from .get_subgraph import *
 from .monograph import *
 from .namespace import *
+from .persisted_operations import *
 from .provider import *
 from .router_token import *
 from .subgraph import *
+from . import outputs
 
 # Make subpackages available:
 if typing.TYPE_CHECKING:
@@ -79,6 +83,14 @@ _utilities.register(
   "fqn": "pulumi_cosmo",
   "classes": {
    "cosmo:index/namespace:Namespace": "Namespace"
+  }
+ },
+ {
+  "pkg": "cosmo",
+  "mod": "index/persistedOperations",
+  "fqn": "pulumi_cosmo",
+  "classes": {
+   "cosmo:index/persistedOperations:PersistedOperations": "PersistedOperations"
   }
  },
  {
