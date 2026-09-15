@@ -1,6 +1,6 @@
 {
   "resource": true,
   "name": "cosmo",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "server": "https://github.com/primait/pulumi-cosmo/releases/download/v${VERSION}/"
 }
