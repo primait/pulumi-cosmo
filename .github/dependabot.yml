@@ -1,90 +1,55 @@
-# This Dependabot template sets a "cooldown" period to mitigate Supply Chain attacks
-# TODO: Feel free to update it according to your needs, but make sure to keep the "cooldown" configuration for all (production) ecosystems you use.
-#
-# For more information on how to configure Dependabot, see:
-# https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference
 version: 2
-
 updates:
-  - package-ecosystem: "pip"
+  - package-ecosystem: github-actions
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    directory: /
+
+  - package-ecosystem: docker
     directories:
       - "*"
     schedule:
-      interval: "weekly"
-    cooldown:
-      default-days: 7
-
-  - package-ecosystem: "cargo"
-    directories:
-      - "*"
-    schedule:
-      interval: "weekly"
-    cooldown:
-      default-days: 7
-
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    cooldown:
-      default-days: 7
-
-  - package-ecosystem: "docker"
-    directories:
-      - "*"
-    schedule:
-      interval: "weekly"
+      interval: weekly
+    ignore:
+      - dependency-name: "*"
+        update-types: ['version-update:semver-major']
     cooldown:
       default-days: 7
 
   - package-ecosystem: "gomod"
     directories:
-      - "*"
+      - "/"
+      - "/**/*"
     schedule:
       interval: "weekly"
     cooldown:
       default-days: 7
     groups:
-      golang:
-        patterns:
-          - "*"
+      go:
+        patterns: ["*"]
 
-  - package-ecosystem: "elm"
+  - package-ecosystem: "npm"
     directories:
-      - "*"
+      - "/"
+      - "/**/*"
     schedule:
       interval: "weekly"
     cooldown:
       default-days: 7
+    groups:
+      npm:
+        patterns: ["*"]
 
-  - package-ecosystem: "helm"
+  - package-ecosystem: "pip"
     directories:
-      - "*"
+      - "/"
+      - "/**/*"
     schedule:
       interval: "weekly"
     cooldown:
       default-days: 7
-
-  - package-ecosystem: "mix"
-    directories:
-      - "*"
-    schedule:
-      interval: "weekly"
-    cooldown:
-      default-days: 7
-
-  - package-ecosystem: "swift"
-    directories:
-      - "*"
-    schedule:
-      interval: "weekly"
-    cooldown:
-      default-days: 7
-
-  - package-ecosystem: "uv"
-    directories:
-      - "*"
-    schedule:
-      interval: "weekly"
-    cooldown:
-      default-days: 7
+    groups:
+      python:
+        patterns: ["*"]
