@@ -2,9 +2,9 @@
     "name": "basic",
     "main": "index.ts",
     "devDependencies": {
-        "@types/node": "^18"
+        "@types/node": "^26"
     },
     "dependencies": {
-        "@pulumi/pulumi": "3.221.0"
+        "@pulumi/pulumi": "3.275.0"
     }
 }
